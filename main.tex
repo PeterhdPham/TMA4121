@@ -1,0 +1,64 @@
+\documentclass[a4paper,12pt,norsk]{article}
+\input{preamble/packages.tex} % imports the packages.tex file from the preamble directory
+\input{preamble/environments.tex} % imports the environments.tex file from the preamble directory
+\input{preamble/macros.tex} % imports the macros.tex file from the preamble directory
+\input{preamble/settings.tex} % imports the settings.tex file from the preamble directory
+\input{preamble/titlepage.tex} % imports the titlepage.tex file from the preamble directory
+\usepackage{titletoc}
+\titlecontents{section}[0pt]{\vspace{0.5em}\bfseries}
+{\thecontentslabel\hspace{1em}}{}{\hfill\contentspage}
+\titlecontents{subsection}[1em]{\vspace{0.25em}}
+{\thecontentslabel\hspace{1em}}{}{\hfill\contentspage}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents
+
+\pagebreak
+\import{./Sections/}{01Task.tex}
+
+\pagebreak
+\import{./Sections/}{02Task.tex}
+
+\pagebreak
+\import{./Sections/}{03Task.tex}
+
+\pagebreak
+\import{./Sections/}{04Task.tex}
+
+\pagebreak
+\import{./Sections/}{05Task.tex}
+
+\pagebreak
+\import{./Sections/}{06Task.tex}
+
+\pagebreak
+\import{./Sections/}{07Task.tex}
+
+\pagebreak
+\import{./Sections/}{08Task.tex}
+
+\pagebreak
+\import{./Sections/}{09Task.tex}
+
+\pagebreak
+\import{./Sections/}{10Task.tex}
+
+\pagebreak
+\import{./Sections/}{11Task.tex}
+
+\pagebreak
+\import{./Sections/}{12Task.tex}
+
+\pagebreak
+\import{./Sections/}{13Task.tex}
+
+
+
+\end{document}
+
+
+
