@@ -1,2 +1,104 @@
 \homeworkProblem[2]
 
+Skriv opp Maxwells likninger på differensialform og utled Poissons likning ved statisk tilfelle $ \left(\frac{\partial \mathbf{E}}{\partial t}=\frac{\partial \mathbf{B}}{\partial t}=\mathbf{0}\right)$ Utled så potensialet til coulombfeltet i to og tre dimensjoner ved å lete etter harmoniske funksjoner som kun avhenger av $\|\mathbf{x}\|$
+
+\subsubsection*{Maxwells likninger}
+Maxwells likninger i differensialform er gitt ved:
+
+\begin{align*}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon_0} \\
+\nabla \cdot \mathbf{B} &= 0 \\
+\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+c^{2} \nabla \times \mathbf{B} &=\frac{\partial \mathbf{E}}{\partial t}+\frac{\mathbf{J}}{\epsilon_{0}}
+\end{align*}
+
+\subsubsection*{Poissons likning ved statisk tilfelle}
+For statiske tilfeller, $\frac{\partial \mathbf{E}}{\partial t}=\frac{\partial \mathbf{B}}{\partial t}=\mathbf{0}$. Dermed reduseres Maxwells likninger til:
+
+\begin{align*}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon_0} \\
+\nabla \cdot \mathbf{B} &= 0 \\
+\nabla \times \mathbf{E} &= 0 \\
+\nabla \times \mathbf{B} &= \mu_0 \mathbf{J}
+\end{align*}
+
+Fra den første ligningen kan vi utlede Poissons likning ved å ta gradienten av begge sider og bruke identiteten $\nabla \cdot \nabla \phi = \nabla^2 \phi$:
+
+\begin{align*}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon_0} \\
+\nabla^2 \phi &= -\frac{\rho}{\epsilon_0}
+\end{align*}
+
+Her er $\phi$ det elektrostatiske potensialet. Vi kan nå lete etter harmoniske funksjoner som kun avhenger av $|\mathbf{x}|$ ved å anta at løsningen tar formen $\phi(\mathbf{x}) = V(r)$ der $r=|\mathbf{x}|$.
+
+I to dimensjoner blir Laplace-operatoren $\nabla^2 = \frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)$. Dermed blir Poissons likning:
+
+\begin{equation*}
+    \frac{1}{r} \frac{\partial}{\partial r}\left(r \frac{\partial V}{\partial r}\right)=-\frac{\rho}{\epsilon_{0}}
+\end{equation*}
+
+\subsection*{Potensialet til coulombfeltet i to og tre dimensjoner}
+Vi skal nå utlede potensialet til coulombfeltet i to og tre dimensjoner ved å lete etter harmoniske funksjoner som kun avhenger av $|\mathbf{x}|$. Anta at det finnes en punktladning $Q$ i origo, slik at den elektriske ladningstettheten er $\rho = Q\delta(\mathbf{x})$.
+
+I to dimensjoner blir Laplace-operatoren $\nabla^2 = \frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial}{\partial r}\right)$. Vi kan nå lete etter løsninger som kun avhenger av $r=|\mathbf{x}|$, og skrive $\phi(r) = \frac{A}{r} + B\ln r$, der $A$ og $B$ er konstanter som må bestemmes. Vi kan nå bruke Poissons likning for å finne uttrykket for potensialet $\phi(r)$:
+
+\begin{equation*}
+\nabla^2 \phi = -\frac{\rho}{\epsilon_0} \implies \frac{1}{r}\frac{d}{dr}\left(r\frac{d\phi}{dr}\right) = -\frac{Q\delta(r)}{\epsilon_0}
+\end{equation*}
+
+Vi ser at den høyresiden i Poissons likning kun bidrar i origo, og kan derfor integrere fra $r-\epsilon$ til $r+\epsilon$ der $\epsilon$ er en liten verdi rundt null:
+
+\begin{align*}
+\int_{r-\epsilon}^{r+\epsilon}\frac{1}{r}\frac{d}{dr}\left(r\frac{d\phi}{dr}\right)dr &= -\frac{Q}{\epsilon_0} \\
+\left.\frac{d\phi}{dr}\right|{r+\epsilon} - \left.\frac{d\phi}{dr}\right|{r-\epsilon} &= -\frac{Q}{\epsilon_0} \
+\end{align*}
+
+Vi kan nå ta grensen $\epsilon \rightarrow 0$ og få:
+
+\begin{equation*}
+\left.\frac{d\phi}{dr}\right|{r=0^+} - \left.\frac{d\phi}{dr}\right|{r=0^-} = -\frac{Q}{\epsilon_0}
+\end{equation*}
+
+Vi ser at den første termen $\left.\frac{d\phi}{dr}\right|{r=0^+}$ ikke er definert siden $\phi(r)$ inneholder en $1/r$-term. Men den andre termen $\left.\frac{d\phi}{dr}\right|{r=0^-}$ kan vi finne ved å ta grensen av $\phi(r)$ når $r$ går mot null fra negativ side, og denne grensen er lik $B$. Dermed har vi:
+
+\begin{equation*}
+B = -\frac{Q}{\epsilon_0}
+\end{equation*}
+
+Vi kan nå finne $A$ ved å sette inn $B$ i uttrykket for $\phi(r)$ og kreve at potensialet $\phi(r)$ går mot null når $r$ går mot uendelig:
+\begin{equation*}
+    \phi(r) = \frac{A}{r} - \frac{Q}{\epsilon_0}\ln r \quad \text{når} \quad r \rightarrow \infty
+\end{equation*}
+    
+Vi ser at den første termen går mot null når $r$ går mot uendelig, slik at vi må ha $A=0$ for at potensialet skal gå mot null. Dermed får vi potensialet for coulombfeltet i to dimensjoner:
+    
+ \begin{equation*}
+    \phi(r) = -\frac{Q}{4\pi\epsilon_0}\ln r
+\end{equation*}
+    
+I tre dimensjoner blir Laplace-operatoren $\nabla^2 = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)$. På samme måte som i to dimensjoner kan vi lete etter løsninger som kun avhenger av $r=|\mathbf{x}|$, og skrive $\phi(r) = \frac{A}{r} + \frac{B}{r^2}$, der $A$ og $B$ er konstanter som må bestemmes. Vi kan nå bruke Poissons likning for å finne uttrykket for potensialet $\phi(r)$:
+    
+\begin{equation*}
+    \nabla^2 \phi = -\frac{\rho}{\epsilon_0} \implies \frac{1}{r^2}\frac{d}{dr}\left(r^2\frac{d\phi}{dr}\right) = -\frac{Q\delta(r)}{\epsilon_0}
+\end{equation*}
+    
+På samme måte som i to dimensjoner kan vi integrere fra $r-\epsilon$ til $r+\epsilon$ og ta grensen $\epsilon \rightarrow 0$ for å finne uttrykket for $\left.\frac{d\phi}{dr}\right|_{r=0^-}$:
+    
+\begin{equation*}
+    \left.\frac{d\phi}{dr}\right|_{r=0^-} = -\frac{Q}{4\pi\epsilon_0}
+\end{equation*}
+    
+Vi kan nå finne $A$ og $B$ ved å sette inn $\left.\frac{d\phi}{dr}\right|_{r=0^-}$ og kreve at potensialet $\phi(r)$ går mot null når $r$ går mot uendelig:
+    
+\begin{align*}
+    \phi(r) &= \frac{Q}{4\pi\epsilon_0}\left(\frac{1}{r} - \frac{r}{R^3}\right) \quad \text{når} \quad r \rightarrow \infty \\
+    \Rightarrow \quad A &= \frac{Q}{4\pi\epsilon_0R} \quad \text{og} \quad B = -\frac{Q}{4\pi\epsilon_0R^2}
+\end{align*}
+    
+Dermed får vi potensialet for coulombfeltet i tre dimensjoner:
+    
+\begin{equation*}
+    \phi(r) = \frac{Q}{4\pi\epsilon_0}\left(\frac{1}{r} - \frac{1}{R}\right)
+\end{equation*}
+
+der $R$ er avstanden fra punktladningen og $Q$ er ladningen til punktladningen som genererer feltet.

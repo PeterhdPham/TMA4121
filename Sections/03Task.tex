@@ -1,0 +1,38 @@
+\homeworkProblem[3]
+Anta tomt rom og vis at dersom bølgefunksjonene $\mathbf{E}(\mathbf{x}, t)=\mathbf{E}_{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)}$ og $\mathbf{B}(\mathbf{x}, t)=\mathbf{B}_{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)}$ skal tilfredsstille Maxwells likninger, må de konstante vektorene $ \mathbf{E}_{0}$, $\mathbf{B}_{0} $ og $ \mathbf{k} $ være innbyrdes ortogonale.
+
+\subsubsection*{Bevis}
+
+
+Vi kan begynne med å skrive opp Maxwells likninger i tomt rom:
+
+\begin{align*}
+\nabla \cdot \mathbf{E} &= 0 & \text{(Gauss' lov)} \\
+\nabla \cdot \mathbf{B} &= 0 & \text{(magnetisk Gauss' lov)} \\
+\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} & \text{(Faradays lov)} \\
+\nabla \times \mathbf{B} &= \mu_0 \epsilon_0 \frac{\partial \mathbf{E}}{\partial t} & \text{(Amperes lov)}
+\end{align*}
+
+Vi kan nå se på en løsning av formen $\mathbf{E}(\mathbf{x}, t)=\mathbf{E}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)}$ og $\mathbf{B}(\mathbf{x}, t)=\mathbf{B}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)}$. Ved å bruke de kjente identitetene for vektoranalyse kan vi enkelt beregne de fire vektorfeltene:
+
+\begin{align*}
+\nabla \cdot \mathbf{E} &= \mathbf{k} \cdot \mathbf{E}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)} = 0 \\
+\nabla \cdot \mathbf{B} &= \mathbf{k} \cdot \mathbf{B}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)} = 0 \\
+\nabla \times \mathbf{E} &= i\mathbf{k} \times \mathbf{E}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)} = -i\frac{\partial}{\partial t} \mathbf{B}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)} = -i\omega \mathbf{B}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)} \\
+\nabla \times \mathbf{B} &= i\mathbf{k} \times \mathbf{B}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)} = \mu_0 \epsilon_0 i\omega \mathbf{E}_{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)}
+\end{align*}
+
+Her har vi brukt at $\frac{\partial}{\partial t} e^{-i\omega t} = -i\omega e^{-i\omega t}$ og at $\mu_0 \epsilon_0 = \frac{1}{c^2}$ for tomt rom.
+
+For at disse vektorfeltene skal tilfredsstille Maxwells likninger, må alle fire ligningene være oppfylt. Vi ser at de to første ligningene gir oss at $\mathbf{k} \cdot \mathbf{E}{0} = \mathbf{k} \cdot \mathbf{B}{0} = 0$. Dette betyr at $\mathbf{E}{0}$ og $\mathbf{B}{0}$ er ortogonale på $\mathbf{k}$, slik at vi kan skrive dette som:
+
+\begin{equation*}
+    \mathbf{k} \cdot \mathbf{E}_{0}=\mathbf{k} \cdot \mathbf{B}_{0}=\left(\mathbf{k} \cdot \hat{\mathbf{E}}_{0}\right)\left|\mathbf{E}_{0}\right|=\left(\mathbf{k} \cdot \hat{\mathbf{B}}_{0}\right)\left|\mathbf{B}_{0}\right|=\mathbf{0}
+\end{equation*}
+
+der $\hat{\mathbf{E}}{0}$ og $\hat{\mathbf{B}}{0}$ er enhetsvektorer i retning av henholdsvis $\mathbf{E}{0}$ og $\mathbf{B}{0}$. Dette betyr at $\mathbf{E}{0}$ og $\mathbf{B}{0}$ må være innbyrdes ortogonale.
+
+Når det gjelder $\mathbf{k}$, kan vi se fra ligningene for curlene av $\mathbf{E}$ og $\mathbf{B}$ at $\mathbf{k}$ må være parallell med $\hat{\mathbf{k}} = \frac{\mathbf{k}}{|\mathbf{k}|}$, altså at $\mathbf{k}$ må være en bølgevektor i retning av bølgefronten.
+
+Dermed har vi vist at dersom en løsning av Maxwells likninger i tomt rom har formen $\mathbf{E}(\mathbf{x}, t)=\mathbf{E}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)}$ og $\mathbf{B}(\mathbf{x}, t)=\mathbf{B}{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)}$, så må de konstante vektorene $\mathbf{E}{0}$, $\mathbf{B}{0}$ og $\mathbf{k}$ være innbyrdes ortogonale.
+

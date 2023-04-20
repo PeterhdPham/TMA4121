@@ -1,0 +1,32 @@
+\homeworkProblem[4]
+
+Utled varmelikningen i tre romlige dimensjoner.
+
+\subsubsection*{Varmelikningen}
+Varmelikningen i tre romlige dimensjoner, også kjent som diffusjonslikningen, beskriver spredning av varme i et område og kan utledes fra varmeledningsligningen. Anta at temperaturen i et område $V$ i tre romlige dimensjoner kan beskrives av funksjonen $T(\mathbf{x},t)$, der $\mathbf{x} = (x,y,z)$ er posisjonsvektoren og $t$ er tiden.
+
+Vi kan utlede varmelikningen ved å anvende prinsippet om energibevaring på et lite volumelement i $V$. Vi antar at varmeenergien i volumelementet endres kun på grunn av varmeledning, og at det ikke skjer noen arbeid eller varmetransport gjennom grenseflatene til elementet. Vi kan dermed skrive
+
+\begin{equation*}
+    \frac{d}{d t} \iiint_{V} \rho c_{p} T(\mathbf{x}, t) d V=-\oint_{S} \mathbf{q} \cdot d \mathbf{S}
+\end{equation*}
+
+der $\rho$ er massetettheten til materialet, $c_p$ er varmekapasiteten, $\mathbf{q}$ er varmestrømmen gjennom overflaten $S$ til volumelementet, og $d\mathbf{S}$ er et infinitesimalt arealelement normalt på overflaten.
+
+Ved å anvende Gauss' teorem og uttrykke varmestrømmen som en funksjon av temperaturgradienten, $\mathbf{q} = -k \nabla T$, der $k$ er varmeledningsevnen til materialet, får vi 
+
+\begin{equation*}
+    \frac{\partial}{\partial t} \iiint_{V} \rho c_{p} T(\mathbf{x}, t) d V=k \iiint_{V} \nabla^{2} T(\mathbf{x}, t) d V
+\end{equation*}
+
+hvor $\nabla^2$ er Laplace-operatoren i tre dimensjoner. Vi kan dermed skrive den endelige varmelikningen som
+
+\begin{equation*}
+\rho c_p \frac{\partial T}{\partial t} = k \nabla^2 T
+\end{equation*}
+
+Dette er varmelikningen i tre romlige dimensjoner, som beskriver spredning av varme i et område med en gitt varmeledningsevne $k$, varmekapasitet $c_p$, og massetetthet $\rho$.
+
+
+
+
