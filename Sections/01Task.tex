@@ -1,379 +1,114 @@
- \homeworkProblem{}
- Skriv opp Maxwells likninger på differensialform og utled
+\homeworkProblem{}
+\subsection*{Ulike former for bølger}
 
- \begin{enumerate}
-    \item de korresponderende likningene på integralform,
-    \item likingen for ladningskonservering, og 
-    \item bølgelikningen ved homogent tilfelle ($\rho=0$og $J=0$)
- \end{enumerate}
+Vi starter med bølger, Det finnes to hovedtyper av bølger: mekaniske- og elektromagnetiske bølger. Mekaniske bølger er bølger som beveger seg gjennom et medium, for eksempel vannbølger eller lydbølger. Elektromagnetiske bølger er bølger som ikke trenger et medium for å bevege seg, for eksempel lys og radiobølger.
 
-Maxwells fire likninger i differensialform:
-\\
-\textbf{1. :}
-\begin{equation*}
-    \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}
-\end{equation*}
+Bølger kan bevege seg transversale eller longitudinale.
 
-hvor $\mathbf{E}$ er det elektriske feltet, $\rho$ er ladningstettheten, $\epsilon_0$ er den elektriske konstanten (også kjent som friromspermittiviteten), og $\nabla \cdot$ er divergensoperatoren.
-\\
-\textbf{2. Gauss'lov for magnetiske felt:}
+Det kan være verdt å nevne at bølger har noder, som er punkter langs bølgen der amplituden er null, mens antinoder er det punker på bølgen der amplituden er maksimal
+
+\subsection*{Bølgelikningen i en dimmensjon}
+
+Hvordan bølger beveger seg gjennom rom og tid kan beskrives med bølgelikningen gitt ved:
 
 \begin{equation*}
-    \nabla \cdot \mathbf{B} = 0
+    \frac{1}{v^2}\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}
 \end{equation*}
 
-hvor $\mathbf{B}$ er det magnetiske feltet, og $\nabla \cdot$ er divergensoperatoren.
-\\
-\textbf{3. Faradays induksjonslov:}
+Her er $v$ bølgens hastighet.
+
+\subsection*{Harmoniske bølger}
+
+Bølger som oppfyller bølgelikninen og kan skrives som en sinus- eller cosinusfunksjon av formen:
 
 \begin{equation*}
-    \nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
+    u(x,t)=A\cdot \cos (kx-\omega t + \phi) 
 \end{equation*}
 
-hvor $\mathbf{E}$ er det elektriske feltet, $\mathbf{B}$ er det magnetiske feltet, $t$ er tiden, $\nabla \times$ er curl-operatoren, og $\partial/\partial t$ er den partielle derivasjonen med hensyn til tiden.
-\\
-\textbf{4. Ampères lov med Maxwells korreksjon:}
+her er $\phi$ fasekonstanten, $k$ er bølgetallet, $\omega$ vinkelfrekvensen og $\phi$ fasekonstanten som bestmmer posisjonen og fasen til bølgen ved $t=0$.
+
+Vi kan se her at formelen oppfyller bølgelikningen dersom bølgehastigheten $v=\frac{\omega}{k}$
+
+\subsection*{Stående bølger}
+
+Når vi har to bølger med samme frekvens og amplitude som beveger seg i motsatt retning og overlapper hverandre så får vi en konstruktiv og destruktiv inteferens. dette resulterer i stående bølger, ha har nodene og antinodene nevnt tidligere stasjonere punkter.\\
+Figur: en illustrasjon av stående bølge med noder og antinoder.
+
+\subsection*{Bølgepakker}
+
+Bølgepakker er kombinasjoner av flere harmoniske bølger med ulike frekvenser og amplituder. De kan representeres matematisk som følger:
+\begin{equation*}
+\psi(x,t) = \int_{-\infty}^{\infty} A(k) e^{i(kx - \omega(k)t)} dk
+\end{equation*}
+
+Bølgepakker er lokalisert i rom og tid, noe som betyr at de har en begrenset utstrekning i både posisjon og tidsdomene.\\
+Ved hjelp av Fourier-analyse kan vi finne spekteret av bølgepakker, dvs. frekvens- og amplitudemodulene til de harmoniske bølgene som utgjør bølgepakken. Fourier-transformasjonen er gitt ved:
 
 \begin{equation*}
-    c^{2} \nabla \times \mathbf{B}=\frac{\partial \mathbf{E}}{\partial t}+\frac{\mathbf{J}}{\epsilon_{0}}
+A(k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \psi(x,t) e^{-ikx} dx
 \end{equation*}
 
-hvor $\mathbf{B}$ er det magnetiske feltet, $\mathbf{J}$ er strømtettheten, $c$ er lyshastigheten i vakuum, $\epsilon_0$ er den elektriske konstanten, $t$ er tiden, $\nabla \times$ er curl-operatoren, og $\partial/\partial t$ er den partielle derivasjonen med hensyn til tiden.
+Figur: En illustrasjon av en bølgepakke i rom og tid, samt dens frekvensspektrum.
 
-\subsection*{Maxwell på integralform}
-\subsubsection*{1. Gauss' lov for elektriske felt:}
-\begin{itemize}
-    \item Vi starter med Gauss' lov i differentialform:
-\end{itemize}
+\subsection*{Schrödingerlikninga:}
+
+Schrödingerlikningen er den grunnleggende likningen for kvantemekanikk, og den beskriver hvordan en bølgefunksjon utvikler seg i tid. Den tidsavhengige Schrödingerlikningen er:
+\begin{equation*}
+i\hbar\frac{\partial \psi(x,t)}{\partial t} = \left[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + U(x,t)\right]\psi(x,t)
+\end{equation*}
+
+Her er $\psi(x,t)$ bølgefunksjonen, $\hbar$ er Plancks reduserte konstant, $m$ er partikkelens masse, og $U(x,t)$ er det potensielle energifeltet.
+
+For stasjonære tilstander, der potensialet ikke er tidsavhengig, kan vi skille ut tids- og romkomponentene i bølgefunksjonen og løse den tidsuavhengige Schrödingerlikningen:
 
 \begin{equation*}
-    \nabla \cdot \mathbf{E}=\frac{\rho}{\epsilon_0}
+-\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} + U(x)\psi(x) = E\psi(x)
 \end{equation*}
 
-Vi ønsker å finne en integralform for denne likningen ved å integrere begge sider av likningen over en volum V. Vi bruker Gauss' divergensteorem, som sier at for et vektorfelt $\mathbf{F}$ og et volum V, har vi:
+Figur: En illustrasjon av en partikkel i et potensialfelt, og hvordan bølgefunksjonen endrer seg i tid og rom.
+
+
+\subsection*{Bølgefunksjonen:}
+
+Bølgefunksjonen, vanligvis representert ved $\psi(x,t)$, beskriver sannsynlighetsfordelingen til et kvantemekanisk system. Dens kvadrat, $|\psi(x,t)|^2$, gir sannsynlighetstettheten for å finne partikkelen i en bestemt posisjon og tid.
+
+For å sikre at den totale sannsynligheten for å finne partikkelen i hele rommet er lik 1, må bølgefunksjonen være normalisert:
 
 \begin{equation*}
-     \int_{V} \nabla \cdot \mathbf{F} d V=\oint_{\partial V} \mathbf{F} \cdot d \mathbf{A} 
+\int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 1
 \end{equation*}
 
-der $\partial V$ er overflaten til volumet V og $d\mathbf{A}$ er et infinitesimalt overflateelement som peker normalt ut fra overflaten.
+Egenfunksjoner og egenverdier er viktige konsepter i kvantemekanikken. Egenfunksjonene til en lineær operatør, som for eksempel Hamiltonoperatøren, er funksjonene som ikke endrer form når operatøren virker på dem, men blir multiplisert med en konstant, kalt egenverdi:
+\begin{equation*}
+\hat{H}\psi_n(x) = E_n\psi_n(x)
+\end{equation*}
 
-Vi bruker dette teoremet på venstre side av Gauss' lov i differentialform, og setter $\mathbf{F} = \mathbf{E}$:
+Figur: En illustrasjon av en bølgefunksjon, dens sannsynlighetstetthet og eksempler på egenfunksjoner for en partikkel i en potensiell brønn.
+\subsection*{Heisenbergs uskarpleiksrelasjon:}
+
+Heisenbergs usikkerhetsrelasjon er et fundamentalt prinsipp i kvantemekanikken. Det innebærer en begrensning i samtidig presis måling av komplementære variabler, som for eksempel posisjon ($x$) og impuls ($p$):
+\begin{equation*}
+\Delta x \Delta p \geq \frac{\hbar}{2}
+\end{equation*}
+
+Her er $\Delta x$ og $\Delta p$ usikkerhetene i målingene av posisjon og impuls, og $\hbar$ er Plancks reduserte konstant.
+
+Usikkerhetsprinsippet har viktige konsekvenser for mikroskopiske systemer, som at en partikkel ikke kan ha både en nøyaktig definert posisjon og impuls samtidig.\\
+Figur: En illustrasjon som viser hvordan usikkerhet i posisjon og impuls øker når nøyaktigheten i målingen av den ene variabelen øker. Dette kan visualiseres med bølgepakker som blir smalere i rom, men bredere i impulsrom, og omvendt.
+
+\subsection*{Dobbeltspalteeksperimentet:}
+Dobbeltspalteeksperimentet er et sentralt eksperiment i kvantemekanikken som demonstrerer bølge-partikkel-dualiteten og interferens. Det viser at elektroner, fotoner og andre partikler kan opptre både som bølger og partikler, avhengig av omstendighetene.
+
+Når partikler sendes gjennom to parallelle spalter og treffer en skjerm bak spaltene, vil de danne et interferensmønster som er karakteristisk for bølgefenomener. Dette indikerer at partiklene opptre som bølger underveis. Intensiteten på skjermen er gitt ved:
 
 \begin{equation*}
-    \int_{V} \nabla \cdot \mathbf{E} d V=\oint_{\partial V} \mathbf{E} \cdot d \mathbf{A} 
+I(x) \propto |\psi_1(x) + \psi_2(x)|^2
 \end{equation*}
 
-Vi kan nå erstatte venstre side av denne likningen med høyresiden av Gauss' lov i differentialform. Vi multipliserer begge sider av denne likningen med $\epsilon_0$:
+Her er $\psi_1(x)$ og $\psi_2(x)$ bølgefunksjonene som beskriver partiklene som passerer gjennom henholdsvis den første og andre spalten.
 
-\begin{equation*}
-     \oint_{\partial V} \mathbf{E} \cdot d \mathbf{A}=\frac{1}{\epsilon_{0}} \int_{V} \rho d V 
-\end{equation*}
+Dobbeltspalteeksperimentet illustrerer også prinsippet om kvantesuperposisjon, der partiklene eksisterer i en superposisjon av alle mulige baner mellom spaltene og skjermen, inntil en måling utføres og bølgefunksjonen kollapser.
 
-Dette gir oss Gauss' lov i integralform:
+Figur: En illustrasjon av dobbeltspalteeksperimentet, med partikler som sendes gjennom to spalter og danner et interferensmønster på skjermen bak. Vis hvordan interferensmønsteret endrer seg når man prøver å måle hvilken spalte partikkelen har passert gjennom.
 
-\begin{equation*}
-    \oint_{\partial V} \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{enc}}{\epsilon_0}
-\end{equation*}
 
-hvor $Q_{enc}$ er den totale ladningen som er inneholdt i volumet V. Dette er den første av Maxwells fire ligninger i integralform.
-
-Denne ligningen sier at den totale elektriske fluksen gjennom en lukket overflate er proporsjonal med den totale ladningen som er inneholdt i volumet som omgir overflaten.
-
-
-\subsubsection*{2. Gauss' lov for magnetiske felt:}
-For å utlede Gauss' lov for magnetiske felt på integralform fra Gauss' lov for magnetiske felt på differensialform, kan vi bruke Gauss' divergensteorem, som sier at:
-
-\begin{equation*}
-    \oint_{\partial V} \mathbf{E} \cdot d \mathbf{A}=\frac{1}{\epsilon_{0}} \int_{V} \rho d V 
-\end{equation*}
-hvor $\mathbf{F}$ er et vektorfelt, $\oint_S$ betyr integral over en lukket flate $S$, $\int_V$ betyr integral over volumet som er begrenset av $S$, $d\mathbf{S}$ er et element av overflaten $S$, og $dV$ er et element av volumet.
-
-Vi kan anvende dette teoremet på Gauss' lov for magnetiske felt på differensialform, som er:
-
-\begin{equation*}
-    \nabla \cdot \mathbf{B}=0 
-\end{equation*}
-
-Dette betyr at divergensen av det magnetiske feltet er null overalt i rommet. La oss nå velge en vilkårlig lukket overflate $S$ som omslutter et volum $V$. Gauss' divergensteorem gir da:
-
-\begin{equation*}
-    \oint_{S} \mathbf{B} \cdot d \mathbf{S}=\int_{V}(\nabla \cdot \mathbf{B}) d V
-\end{equation*}
-
-Siden divergensen av det magnetiske feltet er null, blir høyresiden av likningen lik null. Vi kan derfor forenkle uttrykket til:
-
-\begin{equation*}
-    \oint_{S} \mathbf{B} \cdot d \mathbf{S}=0 
-\end{equation*}
-Dette er Gauss' lov for magnetiske felt på integralform. Den sier at det totale magnetiske fluksen som går ut av en vilkårlig lukket flate er lik null. Denne loven gir oss en viktig sammenheng mellom magnetiske feltlinjer som går ut av en lukket flate, og den totale magnetiske ladningen inne i denne flaten.
-\subsubsection*{3. Faradays induksjonslov:}
-Faradays induksjonslov i differentialform er gitt ved:
-
-\begin{equation*}
-    \nabla \times \mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t}
-\end{equation*}
-
-Vi kan utlede Faradays induksjonslov på integralform ved å anvende Stokes' teorem på denne ligningen. Stokes' teorem sier at:
-
-\begin{equation*}
-    \oint_{C} \mathbf{F} \cdot d \mathbf{r}=\iint_{S}(\nabla \times \mathbf{F}) \cdot d \mathbf{S}
-\end{equation*}
-
-hvor $C$ er en lukket kurve, $S$ er en flate som avgrenses av $C$, $\mathbf{F}$ er et vektorfelt, $d\mathbf{r}$ er en differensiell forflytning på kurven $C$, og $d\mathbf{S}$ er en differensiell flateelementvektor på flaten $S$.
-
-Vi anvender Stokes' teorem på Faradays induksjonslov i differentialform:
-
-\begin{equation*}
-    \oint_{C} \mathbf{E} \cdot d \mathbf{r}=-\iint_{S} \frac{\partial \mathbf{B}}{\partial t} \cdot d \mathbf{S}
-\end{equation*}
-
-hvor $C$ er en lukket kurve som avgrenser flaten $S$.
-
-Vi kan tolke venstresiden av denne ligningen som et elektromotoriskt spenn (EMF) $\mathcal{E}$ langs kurven $C$:
-
-\begin{equation*}
-    \mathcal{E}=\oint_{C} \mathbf{E} \cdot d \mathbf{r}
-\end{equation*}
-
-Så vi kan skrive Faradays induksjonslov på integralform som:
-
-\begin{equation*}
-    \mathcal{E}=-\frac{d}{d t} \iint_{S} \mathbf{B} \cdot d \mathbf{S}
-\end{equation*}
-
-hvor $S$ er en flate som avgrenses av kurven $C$, og $d\mathbf{S}$ er en differensiell flateelementvektor på flaten $S$.
-
-Dette betyr at EMF langs en lukket kurve $C$ er lik minus den tidsderiverte av magnetisk fluks $\Phi_B$ som går gjennom flaten $S$ som er avgrenset av kurven $C$.
-
-\subsubsection*{4. Ampères lov med Maxwells korreksjon:}
-Vi kan starte med å skrive ut høyresiden av Maxwells likning med korreksjon på differensialform:
-
-\begin{equation*}
-    c^{2} \nabla \times \mathbf{B}=\frac{\partial \mathbf{E}}{\partial t}+\frac{\mathbf{J}}{\epsilon_{0}}
-\end{equation*}
-
-Vi kan nå ta curlen av begge sider av denne ligningen, og bruke Stokes' teorem på venstresiden:
-
-\begin{equation*}
-    c^{2} \oint_{\partial A} \mathbf{B} \cdot d \mathbf{l}=\iint_{A} \frac{\partial \mathbf{E}}{\partial t} \cdot d \mathbf{S}+\frac{1}{\epsilon_{0}} \iint_{A} \mathbf{J} \cdot d \mathbf{S}
-\end{equation*}
-
-Her representerer $A$ en vilkårlig, lukket flate som er begrenset av randen $\partial A$, og $\mathbf{l}$ er en vektor som peker langs randen.
-
-Nå kan vi bruke Ampères lov på venstresiden av likningen, og bytte ut integranden med curlen av strømtettheten:
-
-\begin{equation*}
-    c^{2} \int_{\partial \Sigma} \mathbf{B} \cdot d \mathbf{s}=\iint_{A} \frac{\partial \mathbf{E}}{\partial t} \cdot d \mathbf{S}+\frac{1}{\epsilon_{0}} \iint_{A} \nabla \times \mathbf{J} \cdot d \mathbf{S}
-\end{equation*}
-
-Her representerer $\Sigma$ en vilkårlig, lukket kurve som er begrenset av randen $\partial \Sigma$, og $\mathbf{s}$ er en vektor som peker langs kurven.
-
-Til slutt kan vi bruke divergensteoremet på høyresiden av likningen, og bytte ut integranden med divergensen av strømtettheten:
-
-\begin{equation*}
-    c^{2} \int_{\partial \Sigma} \mathbf{B} \cdot d \mathbf{s}=\frac{1}{\epsilon_{0}} \iint_{\Sigma} \mathbf{J} \cdot d \mathbf{S}+\frac{d}{d t} \iint_{\Sigma} \mathbf{E} \cdot d \mathbf{S}
-\end{equation*}
-
-Dette er likningen for Ampères lov med Maxwells korreksjon på integralform. Den beskriver den magnetiske feltstyrken langs en lukket kurve som er proporsjonal med strømmen som passerer gjennom flaten som begrenses av kurven, samt den tidsavledede elektriske fluksen gjennom denne flaten.
-
-\subsection*{Likningen for ladningskonservering}
-Vi kan utlede likningen for ladningskonservering ved å bruke Maxwells likninger. Vi starter med Gauss' lov for elektromagnetiske felt:
-
-\begin{equation*}
-\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}
-\end{equation*}
-
-der $\rho$ er ladningstettheten og $\epsilon_0$ er vakuumpermittiviteten. Vi tar deretter tidsderivaten av begge sider av denne ligningen:
-
-\begin{equation*}
-\frac{\partial}{\partial t}(\nabla \cdot \mathbf{E}) = \frac{1}{\epsilon_0}\frac{\partial \rho}{\partial t}
-\end{equation*}
-
-Vi kan nå bruke Faradays induksjonslov:
-
-\begin{equation*}
-\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
-\end{equation*}
-
-til å erstatte den tidsderiverte av divergensen av $\mathbf{E}$ på venstresiden av likningen over:
-
-\begin{equation*}
-\nabla \cdot (\frac{\partial \mathbf{E}}{\partial t} + \nabla \times \mathbf{B}) = \frac{1}{\epsilon_0}\frac{\partial \rho}{\partial t}
-\end{equation*}
-
-Her har vi brukt Maxwells likninger i differensialform. Vi kan nå bruke Gauss' lov for magnetiske felt:
-
-\begin{equation*}
-\nabla \cdot \mathbf{B} = 0
-\end{equation*}
-
-til å forenkle venstresiden av likningen til
-
-\begin{equation*}
-\nabla \cdot (\frac{\partial \mathbf{E}}{\partial t}) = \frac{1}{\epsilon_0}\frac{\partial \rho}{\partial t}
-\end{equation*}
-
-Vi bruker så divergens-setningen for å skrive om venstresiden av likningen:
-
-\begin{equation*}
-\int_V \nabla \cdot (\frac{\partial \mathbf{E}}{\partial t}) dV = \oint_{\partial V} \frac{\partial \mathbf{E}}{\partial t} \cdot d\mathbf{a}
-\end{equation*}
-
-der $V$ er et vilkårlig volum og $\partial V$ er overflaten av dette volumet.
-
-Vi kan nå bruke Ladningsloven:
-
-\begin{equation*}
-\oint_{\partial V} \mathbf{J} \cdot d\mathbf{a} = \frac{d}{dt} \int_V \rho dV
-\end{equation*}
-
-til å erstatte høyresiden av likningen:
-
-\begin{equation*}
-\int_V \nabla \cdot (\frac{\partial \mathbf{E}}{\partial t}) dV = \frac{1}{\epsilon_0} \oint_{\partial V} \mathbf{J} \cdot d\mathbf{a} + \frac{d}{dt} \int_V \rho dV
-\end{equation*}
-
-Dette er nå likningen for ladningskonservering i integralform, og den kan brukes til å beskrive hvordan elektrisk ladning beveger segVi kan utlede likningen for ladningskonservering ved å bruke Maxwells likninger. Vi starter med Gauss' lov for elektromagnetiske felt:
-
-\begin{equation*}
-\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}
-\end{equation*}
-
-der $\rho$ er ladningstettheten og $\epsilon_0$ er vakuumpermittiviteten. Vi tar deretter tidsderivaten av begge sider av denne ligningen:
-
-\begin{equation*}
-\frac{\partial}{\partial t}(\nabla \cdot \mathbf{E}) = \frac{1}{\epsilon_0}\frac{\partial \rho}{\partial t}
-\end{equation*}
-
-Vi kan nå bruke Faradays induksjonslov:
-
-\begin{equation*}
-\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
-\end{equation*}
-
-til å erstatte den tidsderiverte av divergensen av $\mathbf{E}$ på venstresiden av likningen over:
-
-\begin{equation*}
-\nabla \cdot (\frac{\partial \mathbf{E}}{\partial t} + \nabla \times \mathbf{B}) = \frac{1}{\epsilon_0}\frac{\partial \rho}{\partial t}
-\end{equation*}
-
-Her har vi brukt Maxwells likninger i differensialform. Vi kan nå bruke Gauss' lov for magnetiske felt:
-
-\begin{equation*}
-\nabla \cdot \mathbf{B} = 0
-\end{equation*}
-
-til å forenkle venstresiden av likningen til
-
-\begin{equation*}
-\nabla \cdot (\frac{\partial \mathbf{E}}{\partial t}) = \frac{1}{\epsilon_0}\frac{\partial \rho}{\partial t}
-\end{equation*}
-
-Vi bruker så divergens-setningen for å skrive om venstresiden av likningen:
-
-\begin{equation*}
-\int_V \nabla \cdot (\frac{\partial \mathbf{E}}{\partial t}) dV = \oint_{\partial V} \frac{\partial \mathbf{E}}{\partial t} \cdot d\mathbf{a}
-\end{equation*}
-
-der $V$ er et vilkårlig volum og $\partial V$ er overflaten av dette volumet.
-
-Vi kan nå bruke Ladningsloven:
-
-\begin{equation*}
-\oint_{\partial V} \mathbf{J} \cdot d\mathbf{a} = \frac{d}{dt} \int_V \rho dV
-\end{equation*}
-
-til å erstatte høyresiden av likningen:
-
-\begin{equation*}
-\int_V \nabla \cdot (\frac{\partial \mathbf{E}}{\partial t}) dV = \frac{1}{\epsilon_0} \oint_{\partial V} \mathbf{J} \cdot d\mathbf{a} + \frac{d}{dt} \int_V \rho dV
-\end{equation*}
-
-Dette er nå likningen for ladningskonservering i integralform, og den kan brukes til å beskrive hvordan elektrisk ladning beveger segVi kan utlede likningen for ladningskonservering ved å bruke Maxwells likninger. Vi starter med Gauss' lov for elektromagnetiske felt:
-
-\begin{equation*}
-\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}
-\end{equation*}
-
-der $\rho$ er ladningstettheten og $\epsilon_0$ er vakuumpermittiviteten. Vi tar deretter tidsderivaten av begge sider av denne ligningen:
-
-\begin{equation*}
-\frac{\partial}{\partial t}(\nabla \cdot \mathbf{E}) = \frac{1}{\epsilon_0}\frac{\partial \rho}{\partial t}
-\end{equation*}
-
-Vi kan nå bruke Faradays induksjonslov:
-
-\begin{equation*}
-\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}
-\end{equation*}
-
-til å erstatte den tidsderiverte av divergensen av $\mathbf{E}$ på venstresiden av likningen over:
-
-\begin{equation*}
-\nabla \cdot (\frac{\partial \mathbf{E}}{\partial t} + \nabla \times \mathbf{B}) = \frac{1}{\epsilon_0}\frac{\partial \rho}{\partial t}
-\end{equation*}
-
-Her har vi brukt Maxwells likninger i differensialform. Vi kan nå bruke Gauss' lov for magnetiske felt:
-
-\begin{equation*}
-\nabla \cdot \mathbf{B} = 0
-\end{equation*}
-
-til å forenkle venstresiden av likningen til
-
-\begin{equation*}
-\nabla \cdot (\frac{\partial \mathbf{E}}{\partial t}) = \frac{1}{\epsilon_0}\frac{\partial \rho}{\partial t}
-\end{equation*}
-
-Vi bruker så divergens-setningen for å skrive om venstresiden av likningen:
-
-\begin{equation*}
-\int_V \nabla \cdot (\frac{\partial \mathbf{E}}{\partial t}) dV = \oint_{\partial V} \frac{\partial \mathbf{E}}{\partial t} \cdot d\mathbf{a}
-\end{equation*}
-
-der $V$ er et vilkårlig volum og $\partial V$ er overflaten av dette volumet.
-
-Vi kan nå bruke Ladningsloven:
-
-\begin{equation*}
-\oint_{\partial V} \mathbf{J} \cdot d\mathbf{a} = \frac{d}{dt} \int_V \rho dV
-\end{equation*}
-
-til å erstatte høyresiden av likningen:
-
-\begin{equation*}
-\int_V \nabla \cdot (\frac{\partial \mathbf{E}}{\partial t}) dV = \frac{1}{\epsilon_0} \oint_{\partial V} \mathbf{J} \cdot d\mathbf{a} + \frac{d}{dt} \int_V \rho dV
-\end{equation*}
-
-Dette er nå likningen for ladningskonservering i integralform, og den kan brukes til å beskrive hvordan elektrisk ladning beveger seg og samhandler i elektromagnetiske systemer.
-
-\subsection*{Bølgelikningen ved homogent tilfelle}
-Maxwells likninger i den homogene tilfellet med $\rho=0$ og $\mathbf{J}=0$ er:
-
-\begin{align*}
-\nabla \cdot \mathbf{E} &= 0 \\
-\nabla \cdot \mathbf{B} &= 0 \\      
-\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\           
-\nabla \times \mathbf{B} &= \mu_0\epsilon_0\frac{\partial \mathbf{E}}{\partial t}
-\end{align*}
-
-Vi tar curl på likningen $\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$:
-
-\begin{equation*}
-\nabla \times (\nabla \times \mathbf{E}) = -\frac{\partial}{\partial t} (\nabla \times \mathbf{B})
-\end{equation*}
-
-Ved å bruke identiteten for curl av curl og Faradays lov $\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$, får vi:
-
-\begin{equation*}
-\nabla(\nabla \cdot \mathbf{E})-\nabla^2\mathbf{E} = -\frac{\partial}{\partial t}(\mu_0\epsilon_0\frac{\partial \mathbf{E}}{\partial t})
-\end{equation*}
-
-Siden $\nabla \cdot \mathbf{E} = 0$ for homogene tilfellet, reduseres likningen til:
-
-\begin{equation*}
-\nabla^2\mathbf{E} = \mu_0\epsilon_0\frac{\partial^2 \mathbf{E}}{\partial t^2}
-\end{equation*}
-
-Dette er bølgelikningen for det elektromagnetiske feltet $\mathbf{E}$ i den homogene tilfellet.
