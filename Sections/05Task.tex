@@ -1,2 +1,147 @@
 \homeworkProblem[5]
 
+\subsection*{Kronig-Penney modellen som en modell for 1D gitter}
+
+I denne delen av presentasjonen vil vi se på hvordan Kronig-Penney modellen fungerer som en modell for 1D gitter i faststoffelektronikk.
+
+2a. Hva er et 1D gitter og dets betydning i faststoffelektronikk
+
+Et 1D gitter, eller en eendimensjonal krystallstruktur, er en forenklet representasjon av en krystall der atomene er ordnet i en enkelt lineær kjede. Dette forenklede systemet gjør det lettere å studere elektronisk oppførsel og båndstrukturer i krystaller. Selv om virkelige materialer er tredimensjonale, gir innsikt fra 1D gitter-modeller ofte en grunnleggende forståelse av hvordan elektroner oppfører seg i mer komplekse krystallstrukturer.
+
+2b. Beskrivelse av Kronig-Penney modellen og dens anvendelse
+
+Kronig-Penney modellen er en teoretisk modell som beskriver hvordan elektroner oppfører seg i et 1D gitter. Den tar hensyn til periodiske potensialer som virker på elektronene, noe som gjenspeiler den periodiske naturen til krystallstrukturen. Modellen gir en kvalitativ forståelse av hvordan elektroner oppfører seg i et periodisk potensial og bidrar til å forklare fenomener som båndstrukturer og elektrisk ledningsevne i krystaller.
+
+2c. Matematisk formulering av modellen
+
+Selv om vi ikke vil utlede matematikken bak modellen i detalj, kan vi kort nevne at Kronig-Penney modellen er basert på Schrödinger-ligningen for en partikkel i et periodisk potensial. Den generelle formen for denne ligningen er:
+
+\begin{equation*}
+-\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} + U(x) \psi(x) = E \psi(x)
+\end{equation*}
+
+Her er $\psi(x)$ bølgefunksjonen til elektronet, $U(x)$ er det periodiske potensialet, $E$ er energien til elektronet, $m$ er elektronets masse og $\hbar$ er Plancks reduserte konstant.
+
+Ved å løse denne ligningen for et periodisk potensial kan vi finne bølgefunksjonene og energinivåene til elektronene i 1D gitteret. Dette gir oss en kvalitativ forståelse av elektronenes oppførsel og hvordan de danner energibånd i krystallstrukturen.
+
+\subsection*{Forenklinger i Kronig-Penney modellen}
+I dette avsnittet vil vi se nærmere på forenklingene som er gjort i Kronig-Penney modellen, og hvordan disse påvirker modellens gyldighet og anvendelse.
+
+3a. Idealiseringer og antagelser i modellen
+
+Kronig-Penney modellen er basert på flere idealiseringer og antagelser for å forenkle beregningene og forståelsen av elektronisk oppførsel i et 1D gitter. Noen av disse forenklingene inkluderer:
+
+\begin{enumerate}
+    \item Periodisk potensial: Modellen antar at potensialet som virker på elektronene er periodisk med samme periode som gitteret. Dette er en rimelig antagelse for mange krystallstrukturer, men det er viktig å huske at virkelige materialer kan ha uregelmessigheter og defekter som avviker fra det perfekte periodiske potensialet.
+    \item Endimensjonalt gitter: Modellen betrakter et 1D gitter i stedet for en tredimensjonal krystallstruktur. Dette er en betydelig forenkling, men som tidligere nevnt, gir det fortsatt verdifull innsikt i elektronisk oppførsel i krystaller.
+    \item Kontinuerlig bølgefunksjon: Modellen antar at elektronenes bølgefunksjon er kontinuerlig og har kontinuerlige derivater i gitteret. Dette er en matematisk forenkling som gjør det enklere å løse Schrödinger-ligningen.
+\end{enumerate}
+
+
+
+3b. Begrensninger og gyldighetsområde for modellen
+
+På grunn av disse forenklingene har Kronig-Penney modellen noen begrensninger og er mest relevant for situasjoner der antagelsene er gyldige. Modellen er spesielt nyttig for å forstå kvalitative trekk ved elektroner i periodiske potensialer, som energibånd og dispersjonsrelasjoner. Imidlertid kan modellen gi unøyaktige resultater for materialer med betydelige avvik fra de ideelle forutsetningene, for eksempel uregelmessige krystallstrukturer eller materialer med betydelige defekter.
+
+3c. Potensielle forbedringer eller utvidelser av modellen
+
+For å forbedre nøyaktigheten og anvendelsesområdet for Kronig-Penney modellen, kan man vurdere å inkludere mer realistiske potensialer, for eksempel ved å ta hensyn til ikke-periodiske effekter eller avvik i krystallstrukturen. En annen mulighet er å utvide modellen til to- og tredimensjonale gitterstrukturer for å studere mer realistiske materialer. Disse forbedringene vil naturligvis gjøre beregningene mer kompliserte, men kan gi en mer detaljert og nøyaktig beskrivelse av elektronisk oppførsel i faste stoffer.
+
+\subsection*{Bloch's teorem}
+
+Bloch's teorem er et fundamentalt resultat i faststoffelektronikk som beskriver hvordan elektroner oppfører seg i periodiske potensialer, som de som finnes i krystallinske materialer. Dette teoremet gir oss viktige innsikter i forholdet mellom energinivåer og bølgevektor, og er nøkkelen til å forstå båndstrukturen i krystaller.
+
+4a. Introduksjon til Bloch's teorem og dets betydning i faststoffelektronikk
+
+Bloch's teorem er oppkalt etter den sveitsiske fysikeren Felix Bloch, som først formulerte det i 1928. Teoremet sier at bølgefunksjonen til en elektron i et periodisk potensial kan uttrykkes som et produkt av en planbølge og en periodisk funksjon med samme periode som potensialet. Dette resultatet er viktig fordi det gir oss en grunnleggende forståelse av hvordan elektroner oppfører seg i krystallstrukturer, og det gjør det mulig å beregne egenskapene til elektroniske bånd.
+
+4b. Matematisk formulering av teoremet
+
+Bloch's teorem kan matematisk formuleres som følger:
+
+\begin{equation*}
+\psi_k(x) = e^{ikx}u_k(x)
+\end{equation*}
+
+Her er $\psi_k(x)$ bølgefunksjonen til elektronet, $k$ er bølgevektoren, $x$ er posisjonen, og $u_k(x)$ er en periodisk funksjon med samme periode som gitterpotensialet, det vil si at $u_k(x+a) = u_k(x)$, der $a$ er gitterperioden.
+
+4c. Sammenheng mellom Bloch's teorem og Kronig-Penney modellen
+
+Bloch's teorem er nært knyttet til Kronig-Penney modellen, ettersom begge beskriver oppførselen til elektroner i periodiske potensialer. Kronig-Penney modellen gir en praktisk metode for å løse Schrödinger-ligningen for et 1D gitter, og Bloch's teorem gir oss et generelt rammeverk for å forstå løsningene av denne ligningen.
+
+Ved å bruke Bloch's teorem, kan vi uttrykke bølgefunksjonene til elektronene i Kronig-Penney modellen som et produkt av en planbølge og en periodisk funksjon. Dette forenkler beregningene og gir oss en kvalitativ forståelse av elektronenes oppførsel i gitteret. Spesielt gir Bloch's teorem oss innsikt i hvordan energinivåer og bølgevektor er relatert i krystaller, noe som er viktig for å forstå dispersjonsrelasjonen og effektiv masse, som vi skal se på i de neste delene av presentasjonen.
+
+\subsection*{Løsningene til Kronig-Penney modellen}
+Nå som vi har en forståelse av Kronig-Penney modellen og Bloch's teorem, kan vi se på hvordan vi finner løsningene til modellen og hva de forteller oss om elektronenes oppførsel i et 1D gitter.
+
+5a. Generelle løsningstrinn og metoder
+
+Å løse Kronig-Penney modellen innebærer å finne bølgefunksjonene og energinivåene til elektronene i det periodiske potensialet. Dette gjøres ved å løse Schrödinger-ligningen med de forenklede antagelsene og begrensningene som er beskrevet tidligere. Bloch's teorem spiller en viktig rolle her, da det lar oss uttrykke bølgefunksjonene som et produkt av en planbølge og en periodisk funksjon.
+
+De generelle trinnene for å løse Kronig-Penney modellen er:
+\begin{itemize}
+    \item Skriv ned Schrödinger-ligningen for det periodiske potensialet, som beskrevet tidligere.
+    \item Bruk Bloch's teorem for å uttrykke bølgefunksjonene som et produkt av en planbølge og en periodisk funksjon.
+    \item Løs Schrödinger-ligningen ved hjelp av passende matematiske metoder, for eksempel ved å matche bølgefunksjonene og deres derivater ved grensene mellom potensialbrønnene.
+    \item Finn energinivåene og bølgevektorene til elektronene ved å løse ligningene som er oppnådd fra trinn 3.
+\end{itemize}
+
+5b. Energi-båndstrukturer og deres betydning
+
+Løsningene til Kronig-Penney modellen gir oss energibåndstrukturen til det 1D gitteret. Energibåndstrukturen viser hvordan energinivåene til elektronene er organisert i bånd, med energiområder der elektroner kan eksistere, og energigap der det ikke er tillatt energinivåer for elektronene.
+
+Energibåndstrukturen er viktig for å forstå elektrisk ledningsevne og andre elektroniske egenskaper i krystaller. For eksempel, i metaller har elektroner tilgang til et delvis fylt energibånd, noe som gjør at de lett kan flytte seg og bidra til elektrisk ledningsevne. I isolatorer og halvledere, derimot, er det et energigap mellom fylte og tomme energibånd, noe som hindrer elektroner i å flytte seg fritt og reduserer ledningsevnen.
+
+5c. Typiske resultater og deres tolkning
+
+Løsningene til Kronig-Penney modellen gir oss en kvalitativ forståelse av hvordan elektroner oppfører seg i et 1D gitter. Vi kan se at energibåndstrukturen er et resultat av det periodiske potensialet, og at energigapene oppstår på grunn av interferens
+
+\subsection*{Dispersjonsrelasjonen, E(k)}
+Dispersjonsrelasjonen er en funksjon som beskriver hvordan energinivåene til elektronene i et krystall avhenger av deres bølgevektor, k. Dispersjonsrelasjonen er en viktig egenskap ved krystaller, ettersom den gir oss informasjon om energibåndstrukturen og dermed innsikt i elektriske og optiske egenskaper.
+
+6a. Hva er dispersjonsrelasjonen og dens betydning?
+
+Dispersjonsrelasjonen, E(k), beskriver forholdet mellom energinivåene til elektronene og deres bølgevektor k. Denne relasjonen er viktig for å forstå elektrisk ledningsevne, optiske egenskaper og termiske egenskaper i krystallinske materialer. For eksempel gir dispersjonsrelasjonen oss informasjon om hvordan elektroner beveger seg gjennom materialet og hvordan de reagerer på ytre påvirkninger, som elektriske felt eller lys.
+
+6b. Beregning av dispersjonsrelasjonen fra Kronig-Penney modellen
+
+Når vi løser Kronig-Penney modellen, som beskrevet tidligere, kan vi beregne dispersjonsrelasjonen ved å finne energinivåene for ulike verdier av bølgevektoren k. Dette gir oss en funksjon E(k) som beskriver hvordan energien til elektronene endrer seg med bølgevektoren.
+
+6c. Typiske trekk ved dispersjonsrelasjonen og deres tolkning
+
+Dispersjonsrelasjonen for et 1D gitter kan ha forskjellige egenskaper avhengig av materialet og potensialet som er involvert. Noen typiske trekk ved dispersjonsrelasjonen inkluderer:
+\begin{itemize}
+    \item Energi-bånd: Energibånd er områder der elektroner kan eksistere, og de oppstår som et resultat av det periodiske potensialet. Disse båndene er adskilt av energigap, som er områder der det ikke er tillatt energinivåer for elektronene.
+    \item Båndgapsstørrelse: Størrel
+\end{itemize}
+
+\subsection*{Effektiv masse}
+
+Effektiv masse er et viktig konsept i faststoffelektronikk, da det gir oss en enkel og nyttig beskrivelse av hvordan elektroner oppfører seg i et krystallinske materialer. Den effektive massen tar hensyn til interaksjonen mellom elektronene og det periodiske potensialet og gir oss en måte å forstå og beskrive deres oppførsel på en forenklet måte.
+
+7a. Hva er effektiv masse og dens betydning?
+
+Effektiv masse er en parameter som beskriver hvordan elektronenes dynamikk i et krystallinsk materiale er påvirket av det periodiske potensialet. Den effektive massen gir oss en måte å behandle elektronene som om de var frie partikler med en justert masse, som tar hensyn til deres interaksjon med det periodiske potensialet. Dette forenkler betraktelig beregningene og gir oss innsikt i elektronenes oppførsel i forskjellige materialer.
+
+Effektiv masse er viktig for å forstå elektrisk ledningsevne, termiske egenskaper og optiske egenskaper i krystallinske materialer. Den effektive massen påvirker for eksempel hvordan elektroner beveger seg under påvirkning av elektriske felt og hvor raskt de kan akselerere eller bremse.
+
+7b. Beregning av effektiv masse fra dispersjonsrelasjonen
+
+Effektiv masse kan beregnes fra dispersjonsrelasjonen, E(k), som er funnet ved å løse Kronig-Penney modellen. Den effektive massen er gitt av den andre deriverte av dispersjonsrelasjonen med hensyn til bølgevektoren k:
+
+\begin{equation*}
+m^* = \frac{\hbar^2}{\frac{\partial^2 E(k)}{\partial k^2}}
+\end{equation*}
+
+Her er $\hbar$ Plancks reduserte konstant.
+
+7c. Typiske egenskaper og tolkning av effektiv masse
+
+Effektiv masse kan ha forskjellige verdier avhengig av materialet og det periodiske potensialet. Noen typiske egenskaper og tolkninger av effektiv masse inkluderer:
+
+\begin{itemize}
+    \item Effektiv masse kan være større eller mindre enn den faktiske massen til et fritt elektron, avhengig av interaksjonen mellom elektronene og det periodiske potensialet. En større effektiv masse betyr at elektronene beveger seg tregere i materialet og er mindre responsive på ytre påvirkninger.
+    \item Effektiv masse kan variere med energi og bølgevektor, noe som reflekterer forskjellige oppførsel i forskjellige energibånd og områder av båndstrukturen.
+    \item Materialer med lav effektiv masse, som ofte finnes i halvledere, gir lettere akselerasjon av ladningsbærere og bedre respons på elektriske felt, noe som kan gi gode elektroniske og optiske egenskaper.
+\end{itemize}
+

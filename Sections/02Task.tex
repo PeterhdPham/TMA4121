@@ -4,124 +4,90 @@
 
 Kvantebrønner er en modell som beskriver oppførselen til partikler som elektroner i potensialbrønner på kvantemekanisk nivå.
 
-Figur: tegn en kvantebrønn.
-
 \subsection*{Uendeleg djup kvantebrønn i 1D}
-Vi starter med en uendelig dyp kvantebrønn.
+En uendelig dyp kvantebrønn er en modell der et partikkel befinner seg i et potensial som er null innenfor brønnen og uendelig høyt utenfor. I én dimensjon kan vi betrakte partikkelen som beveger seg langs en x-akse, hvor brønnen strekker seg fra x = 0 til x = a.
 
-figur: tegn en brønn.
+I denne modellen kan vi løse Schrödinger-ligningen for å finne energinivåene og bølgefunksjonene til partikkelen. Siden potensialet er uendelig høyt utenfor brønnen, må bølgefunksjonen være null der. Innenfor brønnen må bølgefunksjonen og dens andrederiverte være kontinuerlig. Siden den ikke kan eksistere utenfor brønnen så impiserer dette også at bølgelikningen er normaliserbar.
 
-Denne brønnen er en forenklet modell der potensialbrønnen er uendelig dyp og partikler kan ikke eksistere utenfor brønnen.
-
-Schrödinger-ligningen for en partikkel i en én-dimensjonal uendelig dyp kvantebrønn er:
-
+Ved å løse Schrödinger-ligningen for denne situasjonen, finner vi at energinivåene er kvantiserte og gitt ved formelen:
 \begin{equation*}
--\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} = E\psi(x),
+E_n = \frac{n^2\pi^2\hbar^2}{8ma^2},
 \end{equation*}
+hvor $n$ er en positiv heltall og $a$ er brønnens bredde.
 
-hvor $\hbar$ er Plancks reduserte konstant, $m$ er partikkelens masse, $\psi(x)$ er bølgefunksjonen og $E$ er energien til partikkelen.
-
-Vi kan også skrive:
-
+Bølgefunksjonene for bundne tilstander har formen:
 \begin{equation*}
-    \psi'' = \frac{2mE}{\hbar}, \text{  der, } k^2 = \frac{2mE}{\hbar^2} 
+    \psi_n(X)=\sqrt{\frac{2}{a}}\cdot \sin (\frac{n \pi x}{a})
 \end{equation*}
-
-Vi ser at den dobbelderiverte av bølgefunksjonen gir oss en negativ konstant foran.
-
-\begin{equation*}
-    \psi(x)=A\cos(kx)+B\sin(kx)
-\end{equation*}
-
-med grensebetingelsene $\psi(0)=\psi(L)=0$
-
-får vi at:
-
-\begin{equation*}
-    \psi(x)=\sqrt[root]{\frac{2}{L}}\sin(\frac{n\pi x}{L})
-\end{equation*}
-
-
-grunnet grensebetingelsene har vi at.
-
-\begin{equation*}
-E_n = \frac{n^2\pi^2\hbar^2}{2mL^2},
-\end{equation*}
-
-hvor $n$ er en positiv heltall og $L$ er brønnens bredde.
-
-tegn brønn med flere nivåer.
-
-\subsection*{Endeleg kvantebrønn}
-En endelig kvantebrønn er en mer realistisk modell enn en uendelig dyp kvantebrønn, der potensialet i brønnen er endelig og partikler kan eksistere utenfor brønnen, men med en lavere sannsynlighet. Dette fører til at både bundne og spredningstilstander kan eksistere i en endelig kvantebrønn.
-
-Schrödinger-ligningen for en partikkel i en én-dimensjonal endelig kvantebrønn er den samme som for en uendelig dyp kvantebrønn, men med en endret potensialfunksjon $V(x)$:
-
-\begin{equation*}
--\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} + V(x)\psi(x) = E\psi(x),
-\end{equation*}
-
-En viktig forskjell mellom endelig og uendelig dyp kvantebrønn er at bølgefunksjonene i en endelig kvantebrønn ikke er begrenset til å være null ved brønnens kanter og kan ha en liten, men ikke-null verdi utenfor brønnen. Dette betyr at elektronene i en endelig kvantebrønn har en viss sannsynlighet for å bli funnet utenfor brønnen.
-
-For å illustrere en endelig kvantebrønn, kan du tegne en figur som viser potensialbrønnen og bølgefunksjonene til de forskjellige energinivåene, inkludert hvordan bølgefunksjonene strekker seg utenfor brønnen.
+der n er et positivt heltall, og x er posisjonen innenfor brønnen.
 
 \subsection*{Bundne og spreiande tilstandar}
-Bundne og spredningstilstander er løsninger av Schrödinger-ligningen avhengig av potensialet og partikkelens energi. Bundne tilstander har diskrete energinivåer og partikler begrenset innenfor et område, mens spredningstilstander har kontinuerlige energinivåer og partikler som beveger seg fritt. I en uendelig dyp kvantebrønn er alle tilstander bundne, og det er ingen spredningstilstander. Disse tilstandene påvirker elektriske og optiske egenskaper i faste stoffer, med bundne tilstander relatert til elektroner i atomer, molekyler eller krystaller, og spredningstilstander relatert til ledningselektroner som bidrar til elektrisk ledningsevne. For å illustrere dette, tegn en figur som viser potensialbrønnen og bølgefunksjonene til de forskjellige energinivåene.
+Bundne tilstander er de tilstandene som er innesperret i brønnen, og de er karakterisert ved diskrete energinivåer og bølgefunksjoner som går mot null utenfor brønnen. Spreiande tilstander, derimot, er ikke begrenset til brønnen og har kontinuerlige energinivåer. I en uendelig dyp kvantebrønn er det ingen spreiande tilstander, siden partikkelen ikke kan eksistere utenfor brønnen.
+
+\subsection*{Endeleg kvantebrønn}
+En endelig kvantebrønn er en modell der et partikkel befinner seg i et potensial som er null innenfor brønnen og en konstant, $V_0$, utenfor brønnen. Akkurat som i det uendelig dype tilfellet, kan vi betrakte partikkelen som beveger seg langs en x-akse, hvor brønnen strekker seg fra $x = 0$ til $x = a$.
+
+Sammenlignet med den uendelig dype kvantebrønnen, har endelige kvantebrønner noen viktige forskjeller i energinivåer og bølgefunksjoner. For det første er ikke energinivåene strengt kvantiserte. Det vil fortsatt være diskrete energinivåer for bundne tilstander, men det er også mulig for partikkelen å ha spreiande tilstander med energier større enn $V_0$.
+
+For å finne energinivåene og bølgefunksjonene i en endelig kvantebrønn, må vi løse Schrödinger-ligningen separat for de tre områdene: x < 0, 0 < x < L og x > L. Dette er mer komplisert enn for den uendelig dype brønnen, og løsningene vil involvere både trigonometriske funksjoner og eksponentialfunksjoner.
+
+Innenfor brønnen (0 < x < L), vil bølgefunksjonen ha en form som likner den for den uendelig dype brønnen:
+\begin{equation*}
+\psi(x) = A \sin(kx) + B \cos(kx),
+\end{equation*}
+der A og B er konstanter som bestemmes av randbetingelsene, og k er bølgetallet, gitt ved:
+\begin{equation*}
+k = \sqrt{\frac{2mE}{\hbar^2}}.
+\end{equation*}
+Utenfor brønnen (x < 0 og x > L) vil bølgefunksjonen ha en eksponentiell form, som representerer den eksponentielle avtagningen av sannsynligheten for å finne partikkelen utenfor brønnen:
+\begin{equation*}
+\psi(x) = C e^{-\alpha x} + D e^{\alpha x},
+\end{equation*}
+der C og D er konstanter, og $\alpha$ er gitt ved:
+\begin{equation*}
+    \alpha = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}.
+\end{equation*}
+\subsection*{Perturbasjonsteori}
+Dersom vi introduserer en liten endring i potensiale neddi brønnen så kan vi bruke perturbasjonsteori, som er en viktig metode for å løse det kvantemekaniske problemet. 
+
+Perturbasjonsteori innebærer å betrakte potensialet som en sum av en kjent del og en liten perturbasjon. Vi kan skrive potensialet som:
+\begin{equation*}
+V(x) = V_0(x) + \lambda V_1(x),
+\end{equation*}
+der $V_0(x)$ er det kjente potensialet, for eksempel en endelig kvantebrønn, $V_1(x)$ er perturbasjonen, og $\lambda$ er en liten parameter som angir styrken av perturbasjonen.
+
+Vi antar at vi kjenner energinivåene og bølgefunksjonene for $V_0(x)$, og vi ønsker å finne hvordan de endres på grunn av perturbasjonen. Vi utvider energiene og bølgefunksjonene i serier i $\lambda$:
+\begin{equation*}
+E_n = E_n^{(0)} + \lambda E_n^{(1)} + \lambda^2 E_n^{(2)} + \cdots,
+\end{equation*}
+\begin{equation*}
+\psi_n(x) = \psi_n^{(0)}(x) + \lambda \psi_n^{(1)}(x) + \lambda^2 \psi_n^{(2)}(x) + \cdots,
+\end{equation*}
+der $E_n^{(0)}$ og $\psi_n^{(0)}(x)$ er energiene og bølgefunksjonene for $V_0(x)$, og $E_n^{(1)}$, $\psi_n^{(1)}(x)$, $E_n^{(2)}$, $\psi_n^{(2)}(x)$, osv. er korreksjoner på grunn av perturbasjonen.
+
+Vi kan deretter sette disse utvidelsene inn i Schrödinger-ligningen og samle ledd med samme potens av $\lambda$. Dette gir oss et sett med hierarkiske ligninger som vi kan løse for å finne korreksjonene til energiene og bølgefunksjonene.
 
 \subsection*{Tunnellering}
-Kvantetunnellering er et fenomen der partikler, som elektroner, kan passere gjennom en potensialbarriere som de normalt ikke ville kunne gjøre i klassisk mekanikk. Dette fenomenet er relevant for kvantebrønner fordi det tillater elektroner å bevege seg fra en brønn til en annen gjennom en potensialbarriere, noe som har viktige konsekvenser for faststoffelektronikk.
+Tunnellering oppstår når en partikkel har en ikke-null sannsynlighet for å befinne seg på den andre siden av en potensiell barriere, selv om dens energi er lavere enn barrierens høyde.
 
-Tunnellering i en endelig kvantebrønn kan analyseres ved å løse Schrödinger-ligningen for partikkelen inne i og utenfor potensialbarrieren. For en partikkel som befinner seg utenfor barrieren, vil bølgefunksjonen ha en eksponentiell form som representerer den avtagende sannsynligheten for å finne partikkelen utenfor brønnen:
+For å forstå tunnellering, kan vi tenke på en endelig kvantebrønn med en partikkel som har en energi E som er lavere enn høyden på den potensielle barrieren, $V_0$. Bølgefunksjonen for partikkelen ha en eksponentiell form utenfor brønnen, noe som betyr at det er en ikke-null sannsynlighet for å finne partikkelen utenfor brønnen, selv om dens energi er lavere enn barrierens høyde.
 
-\begin{equation*}
-\psi(x) = Ae^{-\kappa x},
-\end{equation*}
-
-hvor $\kappa = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}$
-
-\subsection*{Perturbasjonsteori}
-Perturbasjonsteori er en metode for å finne energinivåer og bølgefunksjoner i kvantebrønner med små forstyrrelser i potensialet, der den eksakte løsningen av Schrödinger-ligningen er vanskelig eller umulig å finne. Perturbasjonsteori tar utgangspunkt i en kjent løsning og beregner endringene som skyldes forstyrrelsen.
-
-For å anvende perturbasjonsteori, skriv Schrödinger-ligningen som:
-
-\begin{equation*}
-(\hat{H}_0 + \hat{V}')\psi(x) = E\psi(x),
-\end{equation*}
-
-der $\hat{H}_0$ er den kjente Hamilton-operatøren uten forstyrrelsen, $\hat{V}'$ er forstyrrelsen og $\psi(x)$ og $E$ er bølgefunksjonen og energien til partikkelen, henholdsvis.
-
-Perturbasjonsteori benytter seg av en styrkeparameter $\lambda$ for å beskrive forholdet mellom forstyrrelsen og den opprinnelige potensialbrønnen:
-
-\begin{equation*}
-\hat{V}' = \lambda\hat{V}.
-\end{equation*}
-
-Ved å ekspandere bølgefunksjonen og energien i en potensrekke i $\lambda$, kan man finne approksimerte løsninger for de korrigerte energinivåene og bølgefunksjonene.
-
-Perturbasjonsteori har mange anvendelser i faststoffelektronikk, for eksempel i beregning av energinivåene og bølgefunksjonene i krystaller med defekter, eller i systemer med eksterne elektriske eller magnetiske felt.
+Sannsynligheten for tunnellering avhenger av både høyden og bredden på barrieren, samt energien til partikkelen. Generelt vil sannsynligheten for tunnellering avta eksponentielt med økende bredde og økende forskjell mellom barrierens høyde og partikkelens energi.
 
 \subsection*{Målepostulatet}
-Målepostulatet er et grunnleggende prinsipp i kvantemekanikk som beskriver hvordan målinger av partikkelens posisjon, energi og andre egenskaper utføres. Målepostulatet sier at når en måling utføres på en partikkel, vil partikkelen bli funnet i en bestemt tilstand som er beskrevet av en egenfunksjon til den målte operator og dens respektive egenverdi.
 
-For måling av elektronposisjon og energi i en kvantebrønn, kan man benytte seg av posisjons- og energioperatorer:
+For å kunne koble den matematiske beskrivelsen av kvantetilstander til fysiske målinger og observasjoner kan vi ta i bruk prinsippet målepostulatet.
 
-\begin{equation*}
-\hat{x}\psi(x) = x\psi(x),
-\end{equation*}
+I tilfellet med en kvantebrønn, kan vi bruke målepostulatet til å forutsi sannsynlighetsfordelingen for å finne partikkelen på ulike steder innenfor og utenfor brønnen.
 
-\begin{equation*}
-\hat{H}\psi(x) = E\psi(x),
-\end{equation*}
+Målepostulatet består av to hovedprinsipper:
 
-hvor $\hat{x}$ er posisjonsoperatøren og $\hat{H}$ er Hamilton-operatøren.
-
-Usikkerhetsprinsippet, formulert av Heisenberg, setter en fundamental grense på nøyaktigheten av målinger av partiklers posisjon og bevegelsesmengde (og dermed energi). Dette prinsippet er spesielt viktig i kvantebrønner, der partiklene er begrenset i et lite område og har kvantemekaniske egenskaper som bølge-partikkel-dualitet.
-
-Målepostulatet og usikkerhetsprinsippet har praktiske implikasjoner for faststoffelektronikk, for eksempel i utformingen av nanoskala enheter og systemer, hvor kvanteeffekter blir mer fremtredende og må tas i betraktning for å forstå og styre elektroniske egenskaper.
-
-Under presentasjonen kan du vurdere å tegne en figur som viser en kvantebrønn med en partikkel, og deretter vise hvordan målepostulatet og usikkerhetsprinsippet påvirker partikkelens posisjon og energi.
+Forventningsverdien av en observabel, for eksempel posisjon eller energi, kan finnes ved å ta det indre produktet av bølgefunksjonen og den tilsvarende operatorrepresentasjonen av observabelen:
 
 \begin{equation*}
-    \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2}+U(x)\right]\psi(X)=E\psi(x)
+    \langle A \rangle = \int \psi^{(x)} \hat{A} \psi(x) dx,
 \end{equation*}
 
+der $\psi^*(x)$ er den komplekskonjugerte bølgefunksjonen, $\hat{A}$ er operatoren som representerer observabelen, og $\psi(x)$ er bølgefunksjonen.
+
+Når en måling utføres, vil systemet kollapse til en av egenfunksjonene til den målte observabelen med en sannsynlighet som er proporsjonal med absoluttkvadratet av bølgefunksjonen. Etter målingen vil systemet være i denne egenfunksjonen med en bestemt verdi av observabelen. Dette kan også likne veldig på dobbeltspalteeksperimentet.

@@ -1,7 +1,7 @@
 \homeworkProblem{}
 \subsection*{Ulike former for bølger}
 
-Vi starter med bølger, Det finnes to hovedtyper av bølger: mekaniske- og elektromagnetiske bølger. Mekaniske bølger er bølger som beveger seg gjennom et medium, for eksempel vannbølger eller lydbølger. Elektromagnetiske bølger er bølger som ikke trenger et medium for å bevege seg, for eksempel lys og radiobølger.
+Det finnes to hovedtyper av bølger: mekaniske- og elektromagnetiske bølger. Mekaniske bølger er bølger som beveger seg gjennom et medium, for eksempel vannbølger eller lydbølger. Elektromagnetiske bølger er bølger som ikke trenger et medium for å bevege seg, for eksempel lys og radiobølger.
 
 Bølger kan bevege seg transversale eller longitudinale.
 
@@ -10,105 +10,72 @@ Det kan være verdt å nevne at bølger har noder, som er punkter langs bølgen 
 \subsection*{Bølgelikningen i en dimmensjon}
 
 Hvordan bølger beveger seg gjennom rom og tid kan beskrives med bølgelikningen gitt ved:
-
 \begin{equation*}
     \frac{1}{v^2}\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}
 \end{equation*}
-
 Her er $v$ bølgens hastighet.
 
 \subsection*{Harmoniske bølger}
 
 Bølger som oppfyller bølgelikninen og kan skrives som en sinus- eller cosinusfunksjon av formen:
-
 \begin{equation*}
     u(x,t)=A\cdot \cos (kx-\omega t + \phi) 
 \end{equation*}
-
 her er $\phi$ fasekonstanten, $k$ er bølgetallet, $\omega$ vinkelfrekvensen og $\phi$ fasekonstanten som bestmmer posisjonen og fasen til bølgen ved $t=0$.
 
 Vi kan se her at formelen oppfyller bølgelikningen dersom bølgehastigheten $v=\frac{\omega}{k}$
 
 \subsection*{Stående bølger}
+Når vi har to bølger med samme frekvens og amplitude som beveger seg i motsatt retning og overlapper hverandre så får vi en konstruktiv og destruktiv inteferens. Dette resulterer i stående bølger, der nodene og antinodene nevnt tidligere er stasjonere punkter.
 
-Når vi har to bølger med samme frekvens og amplitude som beveger seg i motsatt retning og overlapper hverandre så får vi en konstruktiv og destruktiv inteferens. dette resulterer i stående bølger, ha har nodene og antinodene nevnt tidligere stasjonere punkter.\\
-Figur: en illustrasjon av stående bølge med noder og antinoder.
 
 \subsection*{Bølgepakker}
 
 Bølgepakker er kombinasjoner av flere harmoniske bølger med ulike frekvenser og amplituder. De kan representeres matematisk som følger:
 \begin{equation*}
-\psi(x,t) = \int_{-\infty}^{\infty} A(k) e^{i(kx - \omega(k)t)} dk
+\Psi(x,t) = \int_{-\infty}^{\infty} A(k) e^{i(kx - \omega(k)t)} dk
 \end{equation*}
+Bølgepakker er lokalisert i rom og tid, noe som betyr at de har en begrenset utstrekning i både posisjon og tidsdomene.
 
-Bølgepakker er lokalisert i rom og tid, noe som betyr at de har en begrenset utstrekning i både posisjon og tidsdomene.\\
 Ved hjelp av Fourier-analyse kan vi finne spekteret av bølgepakker, dvs. frekvens- og amplitudemodulene til de harmoniske bølgene som utgjør bølgepakken. Fourier-transformasjonen er gitt ved:
-
 \begin{equation*}
-A(k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \psi(x,t) e^{-ikx} dx
+A(k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \Psi(x,t) e^{-ikx} dx
 \end{equation*}
-
-Figur: En illustrasjon av en bølgepakke i rom og tid, samt dens frekvensspektrum.
-
 \subsection*{Schrödingerlikninga:}
 
 Schrödingerlikningen er den grunnleggende likningen for kvantemekanikk, og den beskriver hvordan en bølgefunksjon utvikler seg i tid. Den tidsavhengige Schrödingerlikningen er:
 \begin{equation*}
-i\hbar\frac{\partial \psi(x,t)}{\partial t} = \left[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + U(x,t)\right]\psi(x,t)
+i\hbar\frac{\partial \Psi(x,t)}{\partial t} = \left[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + U(x,t)\right]\Psi(x,t)
 \end{equation*}
 
-Her er $\psi(x,t)$ bølgefunksjonen, $\hbar$ er Plancks reduserte konstant, $m$ er partikkelens masse, og $U(x,t)$ er det potensielle energifeltet.
+Her er $\Psi(x,t)$ bølgefunksjonen, $\hbar$ er Plancks reduserte konstant, $m$ er partikkelens masse, og $U(x,t)$ er det potensielle energifeltet.
 
 For stasjonære tilstander, der potensialet ikke er tidsavhengig, kan vi skille ut tids- og romkomponentene i bølgefunksjonen og løse den tidsuavhengige Schrödingerlikningen:
-
 \begin{equation*}
 -\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2} + U(x)\psi(x) = E\psi(x)
 \end{equation*}
 
-Figur: En illustrasjon av en partikkel i et potensialfelt, og hvordan bølgefunksjonen endrer seg i tid og rom.
-
-
 \subsection*{Bølgefunksjonen:}
 
-Bølgefunksjonen, vanligvis representert ved $\psi(x,t)$, beskriver sannsynlighetsfordelingen til et kvantemekanisk system. Dens kvadrat, $|\psi(x,t)|^2$, gir sannsynlighetstettheten for å finne partikkelen i en bestemt posisjon og tid.
+Bølgefunksjonen, vanligvis representert ved $\Psi(x,t)$, beskriver sannsynlighetsfordelingen til et kvantemekanisk system. Dens kvadrat, $|\Psi(x,t)|^2$, gir sannsynlighetstettheten for å finne partikkelen i en bestemt posisjon og tid.
 
 For å sikre at den totale sannsynligheten for å finne partikkelen i hele rommet er lik 1, må bølgefunksjonen være normalisert:
-
 \begin{equation*}
-\int_{-\infty}^{\infty} |\psi(x,t)|^2 dx = 1
+\int_{-\infty}^{\infty} |\Psi(x,t)|^2 dx = 1
 \end{equation*}
-
 Egenfunksjoner og egenverdier er viktige konsepter i kvantemekanikken. Egenfunksjonene til en lineær operatør, som for eksempel Hamiltonoperatøren, er funksjonene som ikke endrer form når operatøren virker på dem, men blir multiplisert med en konstant, kalt egenverdi:
 \begin{equation*}
 \hat{H}\psi_n(x) = E_n\psi_n(x)
 \end{equation*}
-
-Figur: En illustrasjon av en bølgefunksjon, dens sannsynlighetstetthet og eksempler på egenfunksjoner for en partikkel i en potensiell brønn.
 \subsection*{Heisenbergs uskarpleiksrelasjon:}
 
-Heisenbergs usikkerhetsrelasjon er et fundamentalt prinsipp i kvantemekanikken. Det innebærer en begrensning i samtidig presis måling av komplementære variabler, som for eksempel posisjon ($x$) og impuls ($p$):
+Heisenbergs usikkerhetsrelasjon innebærer en begrensning i samtidig presis måling av komplementære variabler, som for eksempel posisjon ($x$) og impuls ($p$):
 \begin{equation*}
 \Delta x \Delta p \geq \frac{\hbar}{2}
 \end{equation*}
-
 Her er $\Delta x$ og $\Delta p$ usikkerhetene i målingene av posisjon og impuls, og $\hbar$ er Plancks reduserte konstant.
 
-Usikkerhetsprinsippet har viktige konsekvenser for mikroskopiske systemer, som at en partikkel ikke kan ha både en nøyaktig definert posisjon og impuls samtidig.\\
-Figur: En illustrasjon som viser hvordan usikkerhet i posisjon og impuls øker når nøyaktigheten i målingen av den ene variabelen øker. Dette kan visualiseres med bølgepakker som blir smalere i rom, men bredere i impulsrom, og omvendt.
-
 \subsection*{Dobbeltspalteeksperimentet:}
-Dobbeltspalteeksperimentet er et sentralt eksperiment i kvantemekanikken som demonstrerer bølge-partikkel-dualiteten og interferens. Det viser at elektroner, fotoner og andre partikler kan opptre både som bølger og partikler, avhengig av omstendighetene.
+Dobbeltspalteeksperimentet viser at elektroner, fotoner og andre partikler kan opptre både som bølger og partikler, avhengig av omstendighetene.
 
-Når partikler sendes gjennom to parallelle spalter og treffer en skjerm bak spaltene, vil de danne et interferensmønster som er karakteristisk for bølgefenomener. Dette indikerer at partiklene opptre som bølger underveis. Intensiteten på skjermen er gitt ved:
-
-\begin{equation*}
-I(x) \propto |\psi_1(x) + \psi_2(x)|^2
-\end{equation*}
-
-Her er $\psi_1(x)$ og $\psi_2(x)$ bølgefunksjonene som beskriver partiklene som passerer gjennom henholdsvis den første og andre spalten.
-
-Dobbeltspalteeksperimentet illustrerer også prinsippet om kvantesuperposisjon, der partiklene eksisterer i en superposisjon av alle mulige baner mellom spaltene og skjermen, inntil en måling utføres og bølgefunksjonen kollapser.
-
-Figur: En illustrasjon av dobbeltspalteeksperimentet, med partikler som sendes gjennom to spalter og danner et interferensmønster på skjermen bak. Vis hvordan interferensmønsteret endrer seg når man prøver å måle hvilken spalte partikkelen har passert gjennom.
-
-
+Når partikler sendes gjennom to parallelle spalter og treffer en skjerm bak spaltene, vil de danne et interferensmønster som er karakteristisk for bølgefenomener. Dette indikerer at partiklene opptre som bølger underveis. 
