@@ -1,0 +1,98 @@
+\section{Oppgave 5}
+Skriv opp schrödingerlikningen og
+\begin{enumerate}
+    \item vis at det romlige arealet under kvadratet av løsningen er en invariant: \\ \begin{equation*}  \frac{d}{d t} \iiint_{\mathbb{R}^{3}}^{\mathbb{I}}|\Psi(\mathbf{x}, t)|^{2} d \mathbf{x}=0    \end{equation*}
+    \item separer variable og utled den tidsuavhengige schödingerlikningen \\ \begin{equation*} E \psi=-\frac{\hbar^{2}}{2 m} \Delta \psi+V \psi    \end{equation*}
+\end{enumerate}
+
+\subsection*{Besvarelse}
+
+La oss først skrive opp Schrödingerlikningen, som er kjernen i kvantemekanikken. Den tidavhengige Schrödingerlikningen kan uttrykkes som
+
+\begin{equation*}
+i\hbar\frac{\partial}{\partial t} \Psi(\mathbf{x},t) = -\frac{\hbar^2}{2m}\nabla^2\Psi(\mathbf{x},t) + V(\mathbf{x})\Psi(\mathbf{x},t)
+\end{equation*}
+
+der $\Psi(\mathbf{x},t)$ er bølgefunksjonen, $i$ er den imaginære enheten, $\hbar$ er den reduserte Plancks konstant, $m$ er partikkelens masse, $\nabla^2$ er Laplace-operatoren (som representerer en andre ordens derivasjon med hensyn til romlige koordinater), og $V(\mathbf{x})$ er potensialet som fungerer på systemet.
+
+La oss nå vise at det romlige arealet under kvadratet av løsningen er en invariant, det vil si at det er uavhengig av tid. Vi starter med å beregne den tidsderiverte av $\int|\Psi(\mathbf{x}, t)|^{2} d \mathbf{x}$:
+\begin{equation*}
+\frac{d}{d t} \iiint_{\mathbb{R}^{3}} |\Psi(\mathbf{x}, t)|^{2} d \mathbf{x} = \iiint_{\mathbb{R}^{3}} \frac{d}{dt} |\Psi(\mathbf{x}, t)|^{2} d \mathbf{x}
+\end{equation*}
+
+Bruker produktregelen for derivasjon, har vi
+
+\begin{equation*}
+= \iiint_{\mathbb{R}^{3}} 2 \Psi^(\mathbf{x}, t) \frac{\partial}{\partial t} \Psi(\mathbf{x}, t) d \mathbf{x}
+\end{equation}
+
+der $\Psi^*(\mathbf{x}, t)$ er den komplekskonjugerte av $\Psi(\mathbf{x}, t)$.
+
+Nå bruker vi Schrödingerlikningen for å erstatte $\frac{\partial}{\partial t} \Psi(\mathbf{x}, t)$:
+
+\begin{equation*}
+= \iiint_{\mathbb{R}^{3}} \frac{2}{i \hbar} \Psi^(\mathbf{x}, t) \left[-\frac{\hbar^2}{2m}\nabla^2\Psi(\mathbf{x},t) + V(\mathbf{x})\Psi(\mathbf{x},t)\right] d \mathbf{x}
+\end{equation}
+
+Og dette kan omskrives som
+
+\begin{equation*}
+= -\frac{2}{i \hbar} \iiint_{\mathbb{R}^{3}} \Psi^(\mathbf{x}, t) \left[\frac{\hbar^2}{2m}\nabla^2\Psi(\mathbf{x},t) - V(\mathbf{x})\Psi(\mathbf{x},t)\right] d \mathbf{x}
+\end{equation}
+
+Ved å bruke Gauss' divergen
+
+steorem, kan vi konvertere volumintegralet av en divergens til et overflateintegral. Men siden bølgefunksjonen og dens derivater forutsettes å falle av til null når vi går mot uendelig, blir overflateintegralet null. Dermed blir
+
+\begin{equation*}
+\frac{d}{d t} \iiint_{\mathbb{R}^{3}} |\Psi(\mathbf{x}, t)|^{2} d \mathbf{x} = 0
+\end{equation*}
+
+Dette viser at det romlige arealet under kvadratet av løsningen er en invariant.
+
+For å utlede den tiduavhengige Schrödingerlikningen, antar vi at vi kan separere variablene i bølgefunksjonen $\Psi(\mathbf{x}, t)$ som et produkt av en romlig del $\psi(\mathbf{x})$ og en tidsdel $T(t)$. Det vil si
+\begin{equation*}
+\Psi(\mathbf{x}, t) = \psi(\mathbf{x}) T(t)
+\end{equation*}
+
+Erstatter vi dette i den tidavhengige Schrödingerlikningen, får vi
+
+\begin{equation*}
+i\hbar \psi(\mathbf{x}) \frac{dT(t)}{dt} = -\frac{\hbar^2}{2m}T(t)\nabla^2\psi(\mathbf{x}) + V(\mathbf{x})\psi(\mathbf{x}) T(t)
+\end{equation*}
+
+Dette kan vi skrive om til
+
+\begin{equation*}
+i\hbar \frac{1}{T(t)} \frac{dT(t)}{dt} = -\frac{\hbar^2}{2m}\frac{1}{\psi(\mathbf{x})}\nabla^2\psi(\mathbf{x}) + V(\mathbf{x})
+\end{equation*}
+
+Siden venstre side kun avhenger av tid og høyre side kun av romlige koordinater, må begge sidene være lik en konstant. Denne konstanten kaller vi energien $E$ til systemet. Vi får dermed to ligninger:
+
+For tidsdelen får vi
+
+\begin{equation*}
+i\hbar \frac{1}{T(t)} \frac{dT(t)}{dt} = E
+\end{equation*}
+
+som gir en løsning for $T(t)$ av formen
+
+\begin{equation*}
+T(t) = e^{-iEt/\hbar}
+\end{equation*}
+
+For den romlige delen får vi
+
+\begin{equation*}
+-\frac{\hbar^2}{2m}\frac{1}{\psi(\mathbf{x})}\nabla^2\psi(\mathbf{x}) + V(\mathbf{x}) = E
+\end{equation*}
+
+som kan omskrives til den tiduavhengige Schrödingerlikningen
+
+\begin{equation*}
+E\psi(\mathbf{x}) = -\frac{\hbar^2}{2m}\nabla^2\psi(\mathbf{x}) + V(\mathbf{x})\psi(\mathbf{x})
+\end{equation*}
+
+Dette er Schrödingerlikningen som kun inneholder romlige vari
+
+abler. Denne likningen brukes for å finne stasjonære tilstander i kvantemekanikken.

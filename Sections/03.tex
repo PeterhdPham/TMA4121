@@ -1,0 +1,66 @@
+\section{Oppgave 3}
+Anta tomt rom og vis at dersom bølgefunksjonene  $\mathbf{E}(\mathbf{x}$, $t)=\mathbf{E}_{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)}$  og  $\mathbf{B}(\mathbf{x}, t)=   \mathbf{B}_{0} e^{i(\mathbf{k} \cdot \mathbf{x}-c t)} $ skal tilfredsstille Maxwells likninger, må de konstante vektorene  $\mathbf{E}_{0}, \mathbf{B}_{0}$  og  $\mathbf{k}$  være innbyrdes ortogonale.
+
+\subsubsection*{Besvarelse}
+
+I dette tomrommet, hvor det ikke er noen ladninger eller strømmer, blir Maxwells likninger noe forenklet. De blir:
+
+\begin{itemize}
+    \item $\nabla \cdot \mathbf{E} = 0$.
+    \item $\nabla \cdot \mathbf{B} = 0$.
+    \item $\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$.
+    \item $c^2 \nabla \times \mathbf{B} = \frac{\partial \mathbf{E}}{\partial t}$.
+\end{itemize}
+
+La oss starte med likning 1 og 2, Gauss' lov for elektrisitet og magnetisme, og se hva som skjer når vi setter inn våre bølgefunksjoner.
+
+For elektrisitetsfeltet får vi:
+
+\begin{equation*}
+\nabla \cdot \mathbf{E} = \nabla \cdot (\mathbf{E}_0 e^{i(\mathbf{k} \cdot \mathbf{x}-ct)}) = i \mathbf{k} \cdot \mathbf{E}_0 e^{i(\mathbf{k} \cdot \mathbf{x}-ct)} = 0
+\end{equation*}
+
+Og for magnetfeltet:
+
+\begin{equation*}
+\nabla \cdot \mathbf{B} = \nabla \cdot (\mathbf{B}_0 e^{i(\mathbf{k} \cdot \mathbf{x}-ct)}) = i \mathbf{k} \cdot \mathbf{B}_0 e^{i(\mathbf{k} \cdot \mathbf{x}-ct)} = 0
+\end{equation*}
+
+Fra disse likningene ser vi at for at begge skal være tilfredsstilt, må vi ha $\mathbf{k} \cdot \mathbf{E}_0 = 0$ og $\mathbf{k} \cdot \mathbf{B}_0 = 0$. Dette betyr at både $\mathbf{E}_0$ og $\mathbf{B}_0$ er ortogonale til bølgevektoren $\mathbf{k}$.
+
+Videre kan vi se på Faradays lov (likning 3) og Ampères lov (likning 4) for å finne forholdet mellom $\mathbf{E}_0$ og $\mathbf{B}_0$:
+
+Fra Faradays lov får vi:
+
+\begin{equation*}
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} \rightarrow i \mathbf{k} \times \mathbf{E}_0 e^{i(\mathbf{k} \cdot \mathbf{x}-ct)} = -i c \mathbf{B}_0 e^{i(\mathbf{k} \cdot \mathbf{x}-ct)}
+\end{equation*}
+
+Som kan forenkles til:
+
+\begin{equation*}
+\mathbf{k} \times \mathbf{E}_0 = c \mathbf{B}_0
+\end{equation*}
+
+Og fra Ampères lov får vi:
+\begin{equation*}
+    c^2 \nabla \times \mathbf{B} = \frac{\partial \mathbf{E}}{\partial t} \rightarrow c^2 i \mathbf{k} \times \mathbf{B}_0 e^{i(\mathbf{k} \cdot \mathbf{x}-ct)} = c \mathbf{E}_0 e^{i(\mathbf{k} \cdot \mathbf{x}-ct)}
+    \end{equation*}
+    
+    Som forenkles til:
+    
+    \begin{equation*}
+    \mathbf{k} \times \mathbf{B}_0 = \mathbf{E}_0
+    \end{equation*}
+    
+    
+
+Som kan forenkles til:
+
+\begin{equation*}
+c \mathbf{k} \times \mathbf{B}_0 = \mathbf{E}_0
+\end{equation*}
+
+Fra disse to siste likningene ser vi at $\mathbf{E}_0$ er ortogonal til $\mathbf{B}_0$, siden $\mathbf{E}_0$ er parallel med kryssproduktet av $\mathbf{k}$ og $\mathbf{B}_0$ og $\mathbf{B}_0$ er parallel med kryssproduktet av $\mathbf{k}$ og $\mathbf{E}_0$.
+
+Vi har dermed vist at for at bølgefunksjonene skal tilfredsstille Maxwells likninger i tomrom, må de konstante vektorene $\mathbf{E}_0$, $\mathbf{B}_0$ og $\mathbf{k}$ være innbyrdes ortogonale.

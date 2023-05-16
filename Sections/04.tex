@@ -1,0 +1,33 @@
+\section{Oppgave 4}
+Utled varmelikningen i tre romlige dimensjoner.
+
+\subsection*{Besvarelse}
+Først, la oss minne om den grunnleggende loven for varmeledning, som også er kjent som Fourier's lov. Den sier at varmeenergi strømmer fra høyere til lavere temperatur og at varmefluksen, $\vec{q}$, er proporsjonal med temperaturgradienten. Dette kan uttrykkes som:
+
+\begin{equation*}
+\vec{q} = -k \nabla T
+\end{equation*}
+
+Her er $k$ den termiske konduktiviteten, en skalarverdi, $T$ er temperaturen, og $\nabla T$ er temperaturgradienten. Merk at minus-signalet viser at varmeoverføringen skjer i retning av synkende temperatur.
+
+Videre, i en ideell gass, er det antatt at det er en lineær sammenheng mellom temperatur og oppbevart kinetisk energi. Derfor kan vi si at endringen i oppbevart energi i et lite volum er proporsjonal med endringen i temperatur, uttrykt som $\rho C \frac{\partial T}{\partial t}$, hvor $\rho$ er densiteten til gassen, $C$ er spesifikk varmekapasitet, og $\frac{\partial T}{\partial t}$ er endringen i temperatur med tiden.
+
+Vi antar også at det ikke er noen varmeproduksjon i volumet. Dette gir oss varmekonservasjonsloven, som sier at endringen i termisk energi i et volum er lik netto varmestrøm ut av volumet. Dette kan uttrykkes som:
+
+\begin{equation*}
+-\nabla \cdot \vec{q} = \rho C \frac{\partial T}{\partial t}
+\end{equation*}
+
+Ved å erstatte $\vec{q}$ med uttrykket fra Fourier's lov får vi:
+
+\begin{equation*}
+\nabla \cdot (k \nabla T) = \rho C \frac{\partial T}{\partial t}
+\end{equation*}
+
+Hvis vi antar at den termiske konduktiviteten er konstant i hele domenet, kan vi ta den ut av divergensoperatoren, som gir oss varmelikningen i tre dimensjoner:
+
+\begin{equation*}
+k \nabla^2 T = \rho C \frac{\partial T}{\partial t}
+\end{equation*}
+
+Der $\nabla^2$ er Laplace-operatoren, som representerer summen av den andre deriverte av temperaturen i hver romlig dimensjon. Dette er den generelle formen for varmelikningen i tre dimensjoner for en ideell gass uten intern varmeproduksjon. Den beskriver hvordan temperaturen endres over tid og rom på grunn av varmeledning.
