@@ -1,12 +1,13 @@
 \section{Oppgave 1}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7 \textwidth]{./01.png}
-    \caption{}
-    \label{fig:01}
-\end{figure}
 
+Skriv opp Maxwells likninger på differensialform og utled
+\begin{itemize}
+    \item de korresponderende likningene på integralform,
+    \item likningen for ladningskonservering, og
+    \item b $ \varnothing $ gelikningen ved homogent tilfelle $ (\rho=0 $ og $ \mathbf{J}=\mathbf{0}) $
+\end{itemize}
 
+\subsection*{Besvarelse}
 Maxwells likninger på differensialform er:
 
 \begin{itemize}
@@ -17,7 +18,7 @@ Maxwells likninger på differensialform er:
 \end{itemize}
 
 
-\subsection*{1: De korresponderende likningene på integralform:}
+\subsubsection*{1: De korresponderende likningene på integralform:}
 
 Gauss' divergensteorem sier at volumintegralet av divergensen av et vektorfelt over et volum er lik flateintegralet av dette vektorfeltet over overflaten som avgrenser volumet. Dette kan skrives matematisk som:
 
@@ -81,7 +82,7 @@ Integralformen av Ampères lov med Maxwells tillegg uttrykker forholdet mellom d
 
 Dette fullfører utledningen av Maxwells likninger på integralform fra differensialformen.
 
-\subsection*{2: Ladningskonservering}
+\subsubsection*{2: Ladningskonservering}
 Ladningskonservering kan utledes fra Maxwells ligninger, spesielt fra Gauss' lov for elektrisitet og den korrigerte formen av Ampères lov.
 
 Begynn med å ta divergensen på begge sider av Ampères lov:
@@ -110,13 +111,13 @@ Nå kan vi erstatte divergensen av det elektriske feltet med ladningstettheten v
 
 som er likningen for ladningskonservering, eller kontinuitetslikningen. Den uttrykker at endringen av ladning i et gitt volum pluss strømmen ut av volumet er lik null, noe som betyr at ladning er konservert.
 
-\subsection*{3: Bølgelikningen i et homogent medium}
+\subsubsection*{3: Bølgelikningen i et homogent medium}
 For å utlede bølgelikningen i et homogent medium der $\rho=0$ og $\vec{J}=0$, kan vi starte fra Faradays lov og Ampères lov med Maxwells tillegg:
 
 \begin{equation*}
 \begin{aligned}
-\nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \quad \text{(Faradays lov)}\
-\nabla \times \vec{B} &= \mu_0 \epsilon_0\frac{\partial \vec{E}}{\partial t} \quad \text{(Ampères lov med Maxwells tillegg)}
+\nabla \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \quad \text{(Faradays lov)}\\
+c^2\nabla \times\vec{B} &= \frac{\partial \vec{E}}{\partial t} \quad \text{(Ampères lov med Maxwells tillegg)}
 \end{aligned}
 \end{equation*}
 
@@ -126,16 +127,16 @@ Hvis vi nå tar rotasjonen på begge sider av Faradays lov og bruker vektorident
 \nabla \times (\nabla \times \vec{E}) = -\frac{\partial}{\partial t} (\nabla \times \vec{B})
 \end{equation*}
 
-Da vi vet at $\nabla \times \vec{B} = \mu_0\epsilon_0\frac{\partial \vec{E}}{\partial t}$ og at $\nabla \cdot \vec{E} = 0$ siden $\rho = 0$, kan vi erstatte disse i likningen over for å få:
+Da vi vet at $c^2\nabla \times \vec{B} = \frac{\partial \vec{E}}{\partial t}$ og at $\nabla \cdot \vec{E} = 0$ siden $\rho = 0$, kan vi erstatte disse i likningen over for å få:
 
 \begin{equation*}
-\nabla (\nabla \cdot \vec{E}) - \nabla^2 \vec{E} = -\mu_0\epsilon_0\frac{\partial^2 \vec{E}}{\partial t^2}
+c^2\nabla (\nabla \cdot \vec{E}) - \nabla^2 \vec{E} = -\frac{\partial^2 \vec{E}}{\partial t^2}
 \end{equation*}
 
 Dette reduserer til:
 
 \begin{equation*}
-\nabla^2 \vec{E} = \mu_0\epsilon_0\frac{\partial^2 \vec{E}}{\partial t^2}
+c^2\nabla^2 \vec{E} = \frac{\partial^2 \vec{E}}{\partial t^2}
 \end{equation*}
 
 Dette er bølgelikningen for det elektriske feltet $\vec{E}$.
@@ -143,7 +144,7 @@ Dette er bølgelikningen for det elektriske feltet $\vec{E}$.
 På en tilsvarende måte, ved å ta rotasjonen på begge sider av Ampères lov med Maxwells tillegg og bruke de samme vektoridentitetene, får vi bølgelikningen for det magnetiske feltet $\vec{B}$:
 
 \begin{equation*}
-\nabla^2 \vec{B} = \mu_0\epsilon_0\frac{\partial^2 \vec{B}}{\partial t^2}
+c^2\nabla^2 \vec{B} =\frac{\partial^2 \vec{B}}{\partial t^2}
 \end{equation*}
 
 Dermed har vi utledet bølgelikningene for et homogent medium der $\rho=0$ og $\vec{J}=0$.

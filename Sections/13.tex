@@ -1,0 +1,49 @@
+\section{Oppgave 13}
+Forklar hvordan man kan løse
+\begin{equation*}
+    \frac{\partial u}{\partial t}=\frac{\partial^{2} u}{\partial x^{2}}
+\end{equation*}
+med rand- og initialkrav:
+\begin{equation*}
+    u(0, t)=u(1, t)=0 \quad u(x, 0)=f(x)
+\end{equation*}
+numerisk.
+\subsection*{Besvarelse}
+Selvfølgelig, la oss gå gjennom den numeriske løsningen av denne partielle differensialligningen (PDE) på norsk.
+
+Den gitte PDE-en er en standard varmeligning, som modellerer diffusjonen av varme over tid. Randbetingelsene spesifiserer at endepunktene av domenet holdes ved null temperatur, og den innledende tilstanden gir en starttemperaturfordeling.
+
+En vanlig numerisk metode for å løse denne PDE-en er Crank-Nicolson-metoden, som er en finitt differansemetode. Ideen bak metoden er å diskretisere rom- og tidsdomenet og deretter tilnærme derivatene med differensligninger.
+
+Crank-Nicolson-metoden bruker en trapesregel for å tilnærme integralet, og gir dermed en god balanse mellom nøyaktighet og beregningskompleksitet.
+
+La oss begynne med en detaljert beskrivelse av metoden.
+
+Først, diskretiser domenet. Velg en steglengde $h=1/N$ for et stort $N$ og la $x_j=jh$ for $j=0,1,\ldots,N$. På samme måte, velg et tidssteg $\tau=T/M$ for et stort $M$ og la $t_k=k\tau$ for $k=0,1,\ldots,M$. Funksjonen $u$ blir tilnærmet på disse diskrete punktene: $u(x_j,t_k) \approx U_j^k$.
+
+Crank-Nicolson-metoden fører da til følgende ligning for $U_j^k$:
+
+\begin{equation*}
+\frac{U_j^{k+1} - U_j^k}{\tau} = \frac{1}{2} \left( \frac{U_{j-1}^k - 2U_j^k + U_{j+1}^k}{h^2} + \frac{U_{j-1}^{k+1} - 2U_j^{k+1} + U_{j+1}^{k+1}}{h^2} \right)
+\end{equation*}
+
+for $j = 1,2,\ldots,N-1$ og $k=0,1,\ldots,M-1$. Dette er et system av lineære ligninger for ukjente $U_j^{k+1}$, $j=1,2,\ldots,N-1$. Legg merke til at systemet for $k+1$ inneholder vilkår fra både gjeldende tidsnivå $k$ og neste tidsnivå $k+1$.
+
+Randbetingelsene er gitt ved $U_0^k = U_N^k = 0$ for en hvilken som helst $k$. Den innledende tilstanden er gitt ved $U_j^0=f(x_j)$ for $j=0,1,\ldots,N$.
+
+For å løse systemet, må du omorganisere vilkårene. La oss innføre parameteren $r=\frac{\tau}{h^2}$. Da kan systemet skrives som følger:
+
+\begin{equation*}
+    r U_{j-1}^{k+1} + 2(1+r) U_j^{k+1} - r U_{j+1}^{k+1} = r U_{j-1}^k + 2(1-r) U_j^k + r U_{j+1}^k
+\end{equation*}
+for $j = 1,2,\ldots,N-1$. Disse ligningene danner et tridiagonalt system som kan løses ved hjelp av Thomas-algoritmen, som er en forenklet form for Gaussisk eliminering tilpasset tridiagonale systemer.
+
+Denne prosessen gjentas for $k=0,1,\ldots,M-1$ for å løse alle $U_j^k$.
+
+Så i oppsummering består løsningsprosessen av disse trinnene:
+
+Diskretiser domenet til et rutenett.
+På hvert tidspunkt, dann et system av ligninger basert på Crank-Nicolson-metoden.
+Løs systemet av ligninger ved hjelp av Thomas-algoritmen.
+Gjenta for det neste tidspunktet.
+Det endelige resultatet er en tilnærming til løsningen $u(x,t)$ på hele rutenettet. Crank-Nicolson-metoden er betingelsesløst stabil og gir en løsning med andre ordens nøyaktighet, noe som betyr at det er en robust og effektiv metode for å løse denne typen PDE.

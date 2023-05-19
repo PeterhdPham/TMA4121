@@ -1,0 +1,58 @@
+\section{Oppgave 11}
+Skriv opp definisjonen på komplekst linjeintegral. Forklar hva Cauchys integralteorem sier, og regn ut
+\begin{equation*}
+    \int_{\mathcal{C}} \frac{1}{\left(z-z_{0}\right)^{n}} d z
+\end{equation*}
+$ \operatorname{der} \mathcal{C} $ er en sirkel med sentrum i $ z_{0} $ i det komplekse planet og $ n $ er et heltall. Skriv opp Cauchys integralformel og forklar hvor den kommer fra.
+
+\subsection*{Besvarelse}
+Sure, I'd be happy to help with that. Let's start with the definition of a complex line integral.
+
+A complex line integral of a complex function $f(z)$ along a curve $\mathcal{C}$ in the complex plane is defined as:
+
+\begin{equation*}
+\int_{\mathcal{C}} f(z) dz = \int_a^b f(\gamma(t)) \gamma'(t) dt
+\end{equation*}
+
+Here, $\gamma(t)$ is a parameterization of the curve $\mathcal{C}$ from $t=a$ to $t=b$. The complex function $f$ is evaluated along the curve, and then this is integrated with respect to $z$ along the curve.
+
+Next, we have Cauchy's Integral Theorem. This theorem is a fundamental result in complex analysis and it states:
+
+\begin{equation*}
+\int_{\mathcal{C}} f(z) dz = 0
+\end{equation*}
+
+where $f(z)$ is a function analytic in a simply connected domain containing the contour $\mathcal{C}$. This theorem essentially means that the line integral of an analytic function over a closed curve in a simply connected domain is zero.
+
+Now, let's calculate the given integral.
+
+\begin{equation*}
+\int_{\mathcal{C}} \frac{1}{(z-z_{0})^{n}} dz
+\end{equation*}
+
+where $\mathcal{C}$ is a circle centered at $z_{0}$ in the complex plane, and $n$ is an integer.
+
+This can be solved by using the residue theorem which is a special case of Cauchy's Integral Formula, where the integral of a function around a closed curve is 2$\pi$i times the sum of the residues within the curve. For this particular integral, there is only one singularity at $z=z_{0}$.
+
+When $n=1$, the integral is $2\pi i$ due to Cauchy's integral theorem.
+
+When $n\neq1$, the integral is 0 because there are no singularities within the curve.
+
+Thus, the result of the integral is:
+
+\begin{equation*}
+\int_{\mathcal{C}} \frac{1}{(z-z_{0})^{n}} dz =
+\begin{cases}
+2\pi i & \text{if } n=1 \\
+0 & \text{if } n\neq1
+\end{cases}
+\end{equation*}
+
+Finally, we have Cauchy's Integral Formula. It states that if $f(z)$ is analytic inside and on a simple closed contour $\mathcal{C}$ and $z_0$ is any point inside $\mathcal{C}$, then:
+
+\begin{equation*}
+f(z_0) = \frac{1}{2\pi i} \int_{\mathcal{C}} \frac{f(z)}{z-z_0} dz
+\end{equation*}
+
+This formula is derived directly from Cauchy's Integral Theorem by considering the difference between two contours, one encircling the singularity and the other not, and then applying the theorem to this difference. The theorem tells us that the integral over this difference is zero, so the integrals over the two contours must be equal, which gives us Cauchy's Integral Formula.
+

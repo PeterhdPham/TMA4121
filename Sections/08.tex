@@ -1,0 +1,75 @@
+\section{Oppgave 8}
+Vis at harmoniske funksjoner er rotasjonsinvariante, og utled Rodrigues' formel
+
+\begin{equation*}
+    \mathbf{z}=\mathbf{x} \cos \theta+\mathbf{y} \times \mathbf{x} \sin \theta+\mathbf{y}(\mathbf{x} \cdot \mathbf{y})(1-\cos \theta)
+\end{equation*}
+der $ \mathbf{z} $ er $ \mathbf{x} $ rotert vinkelen $ \theta $ om enhetsvektoren $ \mathbf{y} $.
+
+\subsection*{Besvarelse}
+
+Selvfølgelig, la oss oversette denne forklaringen til norsk.
+
+La oss begynne med den første delen av spørsmålet ditt, nemlig å vise at harmoniske funksjoner er rotasjonsinvariante. En harmonisk funksjon er en to ganger kontinuerlig derivert funksjon $u : \mathbb{R}^n \rightarrow \mathbb{R}$ som oppfyller Laplace's ligning:
+
+\begin{equation*}
+\Delta u = 0
+\end{equation*}
+
+hvor $\Delta$ er Laplacian-operatøren. For å vise at harmoniske funksjoner er rotasjonsinvariante, må vi vise at for en roterende operator $\mathbf{R}$, så er $\Delta (u \circ \mathbf{R}) = 0$ for enhver harmonisk funksjon $u$.
+
+Laplacian i koordinater er definert som:
+
+\begin{equation*}
+\Delta u = \sum_{i=1}^{n} \frac{\partial^2 u}{\partial x_i^2}
+\end{equation*}
+
+Tenk deg en rotasjon $\mathbf{R}$ i $n$ dimensjoner. Rotasjonen er en lineær transformasjon, og kan representeres ved en matrise $[\mathbf{R}]$, slik at for enhver vektor $\mathbf{x}$, har vi $\mathbf{R}(\mathbf{x}) = [\mathbf{R}]\mathbf{x}$. 
+
+Nå beregner vi Laplacian av $u \circ \mathbf{R}$.
+
+\begin{equation*}
+\Delta (u \circ \mathbf{R}) = \sum_{i=1}^{n} \frac{\partial^2 (u \circ \mathbf{R})}{\partial x_i^2}
+\end{equation*}
+
+Vi kan endre variablene ved å bruke kjerneregelen for differensiering:
+
+\begin{equation*}
+\frac{\partial (u \circ \mathbf{R})}{\partial x_i} = \sum_{j=1}^{n} \frac{\partial u}{\partial x_j} \frac{\partial \mathbf{R}_j}{\partial x_i}
+\end{equation*}
+
+hvor $\mathbf{R}_j$ betegner $j$-te koordinat av den roterte vektoren. Ved å ta den andre deriverte, får vi
+
+\begin{equation*}
+\frac{\partial^2 (u \circ \mathbf{R})}{\partial x_i^2} = \sum_{j,k=1}^{n} \frac{\partial^2 u}{\partial x_j \partial x_k} \frac{\partial \mathbf{R}_j}{\partial x_i} \frac{\partial \mathbf{R}_k}{\partial x_i} + \sum_{j=1}^{n} \frac{\partial u}{\partial x_j} \frac{\partial^2 \mathbf{R}_j}{\partial x_i^2}
+\end{equation*}
+
+Ved å summere over $i$, finner vi
+
+\begin{equation*}
+\Delta (u \circ \mathbf{R}) = \sum_{i,j,k=1}^{n} \frac{\partial^2 u}{\partial x_j \partial x_k} \frac{\partial \mathbf{R}_j}{\partial x_i} \frac{\partial \mathbf{R}_k}{\partial x_i} + \sum_{i,j=1}^{n} \frac{\partial u}{\partial x_j} \frac{\partial^2 \mathbf{R}_j}{\partial x_i^2}
+\end{equation*}
+
+Nå er den viktigste innsikten at rotasjoner ikke endrer lengden på vektorer. Så for enhver vektor $\mathbf{x}$, har vi $||\mathbf{x}||^2 = ||\mathbf{R}(\mathbf{x})||^2$, og ved å differensiere dette med hensyn til $x_i$ gir det
+
+\begin{equation*}
+\sum_{j=1}^{n} x_j \frac{\partial \mathbf{R}_j}{\partial x_i} = 0 \quad \text{og} \quad \sum_{j=1}^{n} \mathbf{R}_j \frac{\partial \mathbf{R}_j}{\partial x_i} = x_i
+\end{equation*}
+
+Dette innebærer at $\frac{\partial \mathbf{R}_j}{\partial x_i}$ er antisymmetrisk i $i$ og $j$, og at $\frac{\partial^2 \mathbf{R}_j}{\partial x_i^2}$ er symmetrisk i $i$ og $j$. Så alle leddene i $\Delta (u \circ \mathbf{R})$ forsvinner på grunn av antisymmetri eller fordi $\Delta u = 0$. Derfor er også $u \circ \mathbf{R}$ harmonisk, så harmoniske funksjoner er faktisk rotasjonsinvariante.
+
+Nå skal vi utlede Rodrigues' rotasjonsformel, som uttrykker resultatet av å rotere en vektor $\mathbf{x}$ med en vinkel $\theta$ rundt en enhetsvektor $\mathbf{y}$.
+
+Formelen er
+
+\begin{equation*}
+\mathbf{z}=\mathbf{x} \cos \theta+\mathbf{y} \times \mathbf{x} \sin \theta+\mathbf{y}(\mathbf{x} \cdot \mathbf{y})(1-\cos \theta)
+\end{equation*}
+
+La oss dele $\mathbf{z}$ inn i to komponenter, en parallell med $\mathbf{y}$, og en vinkelrett på $\mathbf{y}$. Disse komponentene er henholdsvis $\mathbf{y}(\mathbf{x} \cdot \mathbf{y})$ og $\mathbf{x} - \mathbf{y}(\mathbf{x} \cdot \mathbf{y})$. 
+
+Når vi roterer $\mathbf{x}$, endrer den parallelle komponenten seg ikke, siden rotasjon rundt $\mathbf{y}$ ikke endrer noe i retning av $\mathbf{y}$. Men den vinkelrette komponenten roterer i planet vinkelrett på $\mathbf{y}$, og dens størrelse forblir den samme. Så den roterte vektoren er $\mathbf{y}(\mathbf{x} \cdot \mathbf{y}) + (\mathbf{x} - \mathbf{y}(\mathbf{x} \cdot \mathbf{y}))\cos \theta + \mathbf{y} \times \mathbf{x} \sin \theta$. 
+
+Kryssproduktleddet kommer fra høyrehåndsregelen, hvor en positiv rotasjon i henhold til høyrehåndsregelen tilsvarer retningen til kryssproduktet. 
+
+Nå, ved å kombinere de parallelle komponentene og forenkle, oppnår vi Rodrigues' rotasjonsformel. Denne utledningen bruker bare de geometriske egenskapene til prikk- og kryssproduktene, samt egenskapen til rotasjoner for å bevare lengder og vinkler.

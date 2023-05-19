@@ -1,0 +1,61 @@
+\section{Oppgave 6}
+Løs varmelikningen på hele $ \mathbb{R} $
+
+\subsection*{Besvarelse}
+Vi ønsker å løse varmeligningen gitt ved
+
+\begin{equation*}
+u_t = \alpha u_{xx}
+\end{equation*}
+
+hvor $u(x,t)$ er temperaturfordelingen, $t$ er tiden, $x$ er posisjonen langs stangen, og $\alpha$ er en konstant. initialkrav er
+
+\begin{equation*}
+u(x,0) = f(x)
+\end{equation*}
+
+For å løse dette problemet vil vi bruke metoden for Fourier-transformasjon. Fourier-transformasjonen av en funksjon $u(x,t)$ er gitt ved
+
+\begin{equation*}
+\mathscr{F}\{ u(x,y) \} =\hat{u}(k,t) = \int_{-\infty}^{\infty} e^{-ikx} u(x,t) , dx
+\end{equation*}
+
+og dens inverse Fourier-transformasjon er gitt ved
+
+\begin{equation*}
+u(x,t) =  \int_{-\infty}^{\infty} e^{ikx} \hat{u}(k,t) \} , dk
+\end{equation*}
+
+Vi begynner med å ta Fourier-transformasjonen av varmeligningen. Merk at Fourier-transformasjonen av en derivert av en funksjon kan beregnes av regelen $\widehat{g'(x)} = ik\hat{g}(k)$, og Fourier-transformasjonen av en funksjon evaluert ved $t=0$ er bare Fourier-transformasjonen av funksjonen. Så vi får
+
+\begin{equation*}
+\frac{d}{dt} \hat{u}(k,t) = -\alpha k^2 \hat{u}(k,t)
+\end{equation*}
+
+hvor $\hat{u}(k,t)$ er Fourier-transformasjonen av $u(x,t)$. Dette er en enkel ordinær differensialligning. Løsningen på denne differensialligningen er
+
+\begin{equation*}
+\hat{u}(k,t) = \hat{u}(k,0) e^{-\alpha k^2 t}
+\end{equation*}
+
+Nå vet vi at $\hat{u}(k,0)$ bare er Fourier-transformasjonen av initialkrav, som vi vil betegne ved $\mathscr{F}\{ u(x,y) \}$. Så vi kan skrive
+
+\begin{equation*}
+\hat{u}(k,t) = \mathscr{F}\{ u(x,y) \} e^{-\alpha k^2 t}
+\end{equation*}
+
+Vi tar nå den inverse Fourier-transformasjonen av $\hat{u}(k,t)$ for å finne løsningen i det opprinnelige rommet. Vi får
+
+\begin{equation*}
+u(x,t) =  \int_{-\infty}^{\infty} e^{ikx} \mathscr{F}\{ u(x,y) \} e^{-\alpha k^2 t} , dk
+\end{equation*}
+
+For å forenkle uttrykket kan vi kombinere termene som inneholder $k$ for å få
+
+\begin{equation*}
+u(x,t) =  \int_{-\infty}^{\infty} \mathscr{F}\{ u(x,y) \} e^{ikx -\alpha k^2 t} , dk
+\end{equation*}
+
+Dette er løsningen på varmeligningen over hele den reelle linjen med initialkrav $u(x,t)$. Det viser hvordan den opprinnelige temperaturfordelingen $u(x,t)$ utvikler seg over tid i henhold til varmeligningen.
+
+Dette er en generell løsning. Hvis du har en spesifikk initialkrav $u(x,t)$, ville du erstatte $\mathscr{F}\{ u(x,y) \}$ med dens spesifikke Fourier-transformasjon. Merk at løsningen er gitt som en integral som involverer Fourier-transformasjonen av initialkrav, noe som betyr at den inkluderer alle frekvenskomponentene i initialkrav, hver enkelt utvikler seg uavhengig med sin egen rate $\alpha k^2$.

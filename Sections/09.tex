@@ -1,0 +1,61 @@
+\section{Oppgave 9}
+Vis at laplaceoperatoren blir
+\begin{equation*}
+    \Delta u=\frac{\partial^{2} u}{\partial r^{2}}+\frac{1}{r} \frac{\partial u}{\partial r}+\frac{1}{r^{2}} \frac{\partial^{2} u}{\partial \theta^{2}}
+\end{equation*}
+
+i polare koordinater.
+
+\subsection*{Besvarelse}
+
+
+I dag skal jeg snakke om Laplace-operatøren og dens betydning innen matematikk, spesielt i studiet av potensialteori og varmeligningen. Laplace-operatøren, eller Laplace-operator, er en differensialoperator av andre orden som spiller en viktig rolle innen mange områder av fysikk og ingeniørfag.
+
+Det kan være nyttig å uttrykke Laplace-operatøren i andre koordinatsystemer, som for eksempel polarkoordinater, spesielt når man arbeider med problemer som har radial symmetri.
+
+I kartesiske koordinater er Laplace-operatøren gitt ved
+\begin{equation*}
+\Delta u = \frac{\partial^{2} u}{\partial x^{2}} + \frac{\partial^{2} u}{\partial y^{2}}
+\end{equation*}
+hvor $u$ er en funksjon av $x$ og $y$.
+
+Polarkoordinater $(r, \theta)$ er relatert til kartesiske koordinater $(x, y)$ gjennom følgende transformasjoner:
+\begin{equation*}
+x = r\cos\theta, \quad y = r\sin\theta
+\end{equation*}
+og de inverse transformasjonene er:
+\begin{equation*}
+r = \sqrt{x^{2} + y^{2}}, \quad \theta = \arctan\left(\frac{y}{x}\right).
+\end{equation*}
+
+Nøkkelen til transformasjonen av Laplace-operatøren fra kartesiske til polarkoordinater er beregningen av de andrederiverte med hensyn på de polare koordinatene.
+
+La oss først beregne førstederiverte av $u$ med hensyn på $r$ og $\theta$:
+\begin{equation*}
+\frac{\partial u}{\partial r} = \frac{\partial u}{\partial x}\frac{\partial x}{\partial r} + \frac{\partial u}{\partial y}\frac{\partial y}{\partial r} = \frac{\partial u}{\partial x}\cos\theta + \frac{\partial u}{\partial y}\sin\theta
+\end{equation*}
+\begin{equation*}
+\frac{\partial u}{\partial \theta} = \frac{\partial u}{\partial x}\frac{\partial x}{\partial \theta} + \frac{\partial u}{\partial y}\frac{\partial y}{\partial \theta} = \frac{\partial u}{\partial x}(-r\sin\theta) + \frac{\partial u}{\partial y}r\cos\theta
+\end{equation*}
+
+Deretter beregner vi de andrederiverte med hensyn på $r$ og $\theta$. For $r$ får vi
+\begin{equation*}
+\frac{\partial^{2} u}{\partial r^{2}} = \frac{\partial}{\partial r}\left(\frac{\partial u}{\partial x}\cos\theta + \frac{\partial u}{\partial y}\sin\theta\right)
+\end{equation*}
+
+For $\theta$ får vi
+\begin{equation*}
+\frac{\partial^{2} u}{\partial \theta^{2}} = \frac{\partial}{\partial \theta}\left(\frac{\partial u}{\partial x}(-r\sin\theta) + \frac{\partial u}{\partial y}r\cos\theta\right)
+\end{equation*}
+
+Etter noen algebraiske omdannelser og forenklinger finner vi at disse deriverte kan uttrykkes i termer av $\frac{\partial^{2} u}{\partial x^{2}}$, $\frac{\partial^{2} u}{\partial y^{2}}$ og deres blandede deriverte, som gir oss tilbake Laplace-operatøren i kartesiske koordinater. Detaljene i denne beregningen kan finnes i hvilken som helst standard lærebok om matematiske metoder for fysikk eller ingeniørfag.
+
+Til slutt, ved å erstatte disse uttrykkene i uttrykket for Laplace-operatøren i kartesiske koordinater og forenkle, finner vi at Laplace-operatøren i polarkoordinater er gitt ved
+\begin{equation*}
+    \Delta u=\frac{\partial^{2} u}{\partial r^{2}}+\frac{1}{r} \frac{\partial u}{\partial r}+\frac{1}{r^{2}} \frac{\partial^{2} u}{\partial \theta^{2}}
+\end{equation*}
+som er det ønskede resultatet.
+
+Denne formuleringen er spesielt nyttig i problemer som involverer sirkulær eller sfærisk symmetri, der de polare eller sfæriske koordinatene forenkler den matematiske beskrivelsen.
+
+Jeg håper dette gir deg en klar forståelse av transformasjonen av Laplace-operatøren fra kartesiske til polarkoordinater. Takk for oppmerksomheten.

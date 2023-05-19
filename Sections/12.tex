@@ -1,0 +1,35 @@
+\section{oppgave 12}
+
+Forklar hva residuteoremet sier og hvordan dette kan brukes til å invertere laplacetransformen
+til et signal.
+
+\subsection*{Besvarelse}
+La oss begynne med å diskutere residuteoremet. Det er et kraftig verktøy innen feltet kompleks analyse som omhandler konturintegralet rundt singulariteter, det vil si punkter der en funksjon blir udefinert.
+
+Teoremet sier følgende:
+
+\begin{equation*}
+\oint_C f(z) , dz = 2\pi i \sum_{k=1}^{n} \text{Res}_{a_k} f(z)
+\end{equation*}
+
+Her representerer venstre side av ligningen et lukket konturintegrale av funksjonen $ f(z) $ over en kontur $ C $. På høyre side har vi summen av residuene til funksjonen $ f(z) $ ved dens singulære punkter $ a_{k} $, multiplisert med $ 2 \pi i $. Et residu er i hovedsak 'koeffisienten' til $ \frac{1}{z} $-termen når vi uttrykker vår funksjon som en Laurent-serie rundt en singularitet.Så, hvordan hjelper restteoremet oss med å invertere Laplacetransformasjonen?Laplace-transformasjonen er et kraftig verktøy isignalbehandling og kontrollsystemer, da det lar oss konvertere komplekse differensialligninger til enklere algebraiske ligninger. Den er definert som følger for en gitt funksjon $ f(t) $ :
+
+\begin{equation*}
+    F(s) = \mathcal{L}{f(t)} = \int_{0}^{\infty} f(t) e^{-st} dt
+\end{equation*}
+    
+Hvor $s$ er et komplekst tall.
+
+Inversjonen av Laplace-transformasjonen utføres vanligvis ved bruk av Bromwich-integralet, også kjent som den inverse Laplace-transformasjonen, som er gitt av:
+
+\begin{equation*}
+f(t) = \mathcal{L}^{-1}{F(s)} = \frac{1}{2\pi i} \int_{\gamma-i\infty}^{\gamma+i\infty} F(s) e^{st} ds
+\end{equation*}
+
+Her er den reelle delen av $ s $ større enn den reelle delen av enhver singularitet av $ F(s) $, og $ \gamma $ er et reelt tall.Nå er integralet over en kompleks integral, og det er her vi benytter restteoremet. Ved å velge en passende kontur $ C $ som inkluderer singularitetene til $ F(s) e^{s t} $, kan vi likestille integralet med $ 2 \pi i $ ganger summen av residuene ved disse singulariteteneI praksis trenger vi vanligvis å finne polene til funksjonen $ F(s) $, beregne residuene ved disse polene, og deretter summere dem opp. Hvis polene er enkle (det vil si av orden 1), kan residuet ved en pol $ a $ beregnes ved hjelp av formelen:
+
+\begin{equation*}
+    \text{Res}{a} F(s) = \lim{s \to a} (s - a)F(s)
+\end{equation*}
+
+Så til slutt gjør restteoremet det mulig for oss å evaluere komplekse integraler som oppstår i prosessen med å invertere Laplace-transformasjoner. Ved å beregne residuene ved de singulære punktene til funksjonen under integralet, kan vi finne dens eksakte verdi. Dette er en betydelig hjelp i å løse differensialligninger og andre problemer innen matematisk fysikk og ingeniørfag.

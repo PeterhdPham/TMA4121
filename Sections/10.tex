@@ -1,0 +1,62 @@
+\section{Oppgave 10}
+
+La $ u $ og $ v $ være henholdsvis real- og imaginærdelen til en kompleks analytisk funksjon $ f $. Bruk definisjonen av kompleks derivert til å utlede Cauchy-Riemann-likningene
+
+\begin{equation*}
+    \frac{\partial u}{\partial x}=\frac{\partial v}{\partial y} \quad \frac{\partial u}{\partial y}=-\frac{\partial v}{\partial x}    
+\end{equation*}
+og vis at $ u $ og $ v $ er harmoniske funksjoner.
+
+\subsection*{Besvarelse}
+
+La oss begynne med å vurdere en kompleks funksjon $ f $ som er skrevet i form av reelle og imaginære deler. Vi kan uttrykke $ f $ som $ f(z) = u(x, y) + iv(x, y) $, der $ z = x + iy $ og $ u, v: \mathbb{R}^2 \rightarrow \mathbb{R} $ er reellverdige funksjoner.
+
+Nå, ifølge definisjonen av den komplekse deriverte, er funksjonen $ f $ analytisk i et punkt hvis og bare hvis grensen
+
+\begin{equation*}
+f'(z) = \lim_{h \to 0} \frac{f(z+h)-f(z)}{h}
+\end{equation*}
+
+eksisterer.
+
+La oss nå vurdere små inkrementer $ \Delta x $ og $ \Delta y $, og la $ h = \Delta x + i \Delta y $. Da kan vi omskrive definisjonen av den deriverte som
+
+\begin{equation*}
+f'(z) = \lim_{(\Delta x, \Delta y) \to (0, 0)} \frac{u(x + \Delta x, y + \Delta y) + i v(x + \Delta x, y + \Delta y) - u(x, y) - iv(x, y)}{\Delta x + i \Delta y}.
+\end{equation*}
+
+Denne grensen bør eksistere og være den samme uavhengig av retningen hvorfra $ h $ nærmer seg null. Hvis vi lar $ h $ nærme seg null langs den reelle aksen, det vil si $ \Delta y = 0 $, får vi
+
+\begin{equation*}
+f'(z) = \lim_{\Delta x \to 0} \frac{u(x + \Delta x, y) - u(x, y)}{\Delta x} + i \lim_{\Delta x \to 0} \frac{v(x + \Delta x, y) - v(x, y)}{\Delta x} = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x}.
+\end{equation*}
+
+På den annen side, hvis vi lar $ h $ nærme seg null langs den imaginære aksen, det vil si $ \Delta x = 0 $, får vi
+
+\begin{equation*}
+f'(z) = \lim_{\Delta y \to 0} \frac{u(x, y + \Delta y) - u(x, y)}{i \Delta y} + i \lim_{\Delta y \to 0} \frac{v(x, y + \Delta y) - v(x, y)}{i \Delta y} = -i \frac{\partial u}{\partial y} + \frac{\partial v}{\partial y}.
+\end{equation*}
+
+Ved å sammenligne de to uttrykkene kan vi konkludere med at
+
+\begin{equation*}
+\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \quad \text{og} \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}.
+\end{equation*}
+
+Dette er Cauchy-Riemanns ligninger, en nødvendig betingelse for at en kompleks funksjon skal være analytisk.
+
+Vi blir også bedt om å bevise at funksjonene $ u $ og $ v $ er harmoniske, det vil si at de oppfyller Laplace-ligningen, $ \nabla^2 u = \nabla^2 v = 0 $.
+
+Ved å derivere den første Cauchy-Riemann-ligningen med hensyn på $ x $ og den andre med hensyn på $ y $, og legge sammen de to resultatene, får vi
+
+\begin{equation*}
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0.
+\end{equation*}
+
+Ved å gjøre det samme, men denne gangen derivere den første ligningen med hensyn på $ y $ og den andre med hensyn på $ x $, og trekke de to resultatene fra hverandre, får vi
+
+\begin{equation*}
+\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} = 0.
+\end{equation*}
+
+Dermed kan vi se at både $ u $ og $ v $ oppfyller Laplace-ligningen, så de er faktisk harmoniske funksjoner. Dette fullfører beviset.

@@ -1,0 +1,43 @@
+\section{Oppgave 7}
+Utled middelverdisatsene
+\begin{equation*}
+u(x)=\frac{1}{4 \pi r^{2}} \iint_{\partial \Omega} u d S=\frac{3}{4 \pi r^{3}} \iiint_{\Omega} u d x
+\end{equation*}
+
+der $ x \in \mathbb{R}^{3} $ og $ \Omega $ er en kule sentrert i $ x $ og med vilkårlig radius $r $, og $ u $ er en harmonisk funksjon.
+
+\subsection*{Besvarelse}
+
+Uttrykket allment kjent som Middelverdisetningen for harmoniske funksjoner. Harmoniske funksjoner er funksjoner som tilfredsstiller Laplaces ligning, som er en partiell differensialligning av andre orden.
+
+Middelverdisetningen består av to deler:
+\begin{itemize}
+    \item Verdien av den harmoniske funksjonen på ethvert punkt er lik gjennomsnittet av funksjonsverdiene på en hvilken som helst sfære sentrert ved det punktet.
+    \item Verdien av den harmoniske funksjonen på ethvert punkt er lik gjennomsnittet av funksjonsverdiene innenfor enhver sfære sentrert ved det punktet.
+    
+\end{itemize}
+
+La oss diskutere hvert eiendom separat:
+
+\begin{itemize}
+\item Den første delen av Middelverdisetningen sier at hvis $u$ er harmonisk, så er
+\begin{equation*}
+u(x) = \frac{1}{4 \pi r^{2}} \iint_{\partial \Omega} u d S
+\end{equation*}
+for alle $x \in \mathbb{R}^{3}$ og alle sfærer $\Omega$ sentrert på $x$. Her betegner $r$ radiusen til sfæren, $dS$ betegner overflatemålet på sfæren, og $\partial \Omega$ representerer grensen til sfæren.
+
+Intuisjonen bak denne egenskapen er at verdien av en harmonisk funksjon i et punkt i rommet er bestemt av gjennomsnittsverdien av funksjonen på en hvilken som helst sfære sentrert ved det punktet. Denne egenskapen er en konsekvens av maksimumsprinsippet for harmoniske funksjoner, som sier at maksimum og minimum for en harmonisk funksjon i et lukket og begrenset domene oppstår på domenets grense.
+
+\item Den andre delen av Middelverdisetningen sier at hvis $u$ er harmonisk, så er
+\begin{equation*}
+u(x) = \frac{3}{4 \pi r^{3}} \iiint_{\Omega} u d x
+\end{equation*}
+
+for alle $x \in \mathbb{R}^{3}$ og alle sfærer $\Omega$ sentrert på $x$. Her betegner $dx$ volummålet i $\mathbb{R}^{3}$.
+
+Intuisjonen bak denne egenskapen er lik den for den første egenskapen, men i stedet for å vurdere gjennomsnittsverdien av funksjonen på grensen til en sfære, vurderer vi gjennomsnittsverdien av funksjonen over volumet av sfæren.
+
+Denne egenskapen kan utledes fra den første ved hjelp av divergensteoremet, som knytter fluksen av et vektorfelt gjennom en lukket overflate til divergensen av vektorfeltet innenfor volumet omsluttet av overflaten.
+\end{itemize}
+
+Til slutt er Middelverdisetningen et kraftig verktøy i teorien om harmoniske funksjoner fordi den lar oss utlede verdien av en funksjon på et punkt fra verdiene av funksjonen rundt det punktet.
